@@ -22,17 +22,16 @@ export default defineConfig({
       output: {
         manualChunks: (id) => {
           if (id.includes('node_modules')) {
-            // CRITICAL FIX: Keep React core together to avoid createContext issues
-            if (id.includes('react') && !id.includes('react-router-dom') && !id.includes('react-helmet')) {
-              return 'react-core'
-            }
-            // Keep React Router separate but ensure it uses the same React instance
-            if (id.includes('react-router-dom')) {
-              return 'react-router'
-            }
-            // Framer Motion - heavy animation library, separate chunk
-            if (id.includes('framer-motion')) {
-              return 'framer'
+            // CRITICAL FIX: Bundle React, ReactDOM, and Framer Motion together to prevent context issues
+            if (id.includes('react') || id.includes('framer-motion')) {
+              if (id.includes('react-router-dom')) {
+                return 'react-router'
+              }
+              if (id.includes('react-helmet')) {
+                return 'helmet'
+              }
+              // Bundle React core with Framer Motion to share context
+              return 'react-vendor'
             }
             // Lucide Icons - large icon set, separate chunk
             if (id.includes('lucide-react')) {
@@ -115,15 +114,19 @@ export default defineConfig({
     devSourcemap: false
   },
   optimizeDeps: {
-    include: ['react', 'react-dom', 'react-router-dom', 'react-helmet-async'],
-    exclude: []
+    include: ['react', 'react-dom', 'react-router-dom', 'react-helmet-async', 'framer-motion'],
+    exclude: [],
+    esbuildOptions: {
+      preserveSymlinks: false
+    }
   },
   // CRITICAL FIX: Ensure single instance of React to prevent createContext errors
   resolve: {
-    dedupe: ['react', 'react-dom'],
+    dedupe: ['react', 'react-dom', 'framer-motion'],
     alias: {
       react: path.resolve(__dirname, 'node_modules/react'),
-      'react-dom': path.resolve(__dirname, 'node_modules/react-dom')
+      'react-dom': path.resolve(__dirname, 'node_modules/react-dom'),
+      'framer-motion': path.resolve(__dirname, 'node_modules/framer-motion')
     }
   }
 })
