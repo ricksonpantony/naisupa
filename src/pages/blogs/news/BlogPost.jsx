@@ -1,38 +1,38 @@
-import React, { lazy, Suspense } from 'react'
+import React from 'react'
 import { useParams } from 'react-router-dom'
 
-// Import all the specific blog post components
-const BlogPost1 = lazy(() => import('./BlogPost1'))
-const BlogPost2 = lazy(() => import('./BlogPost2'))
-const BlogPost3 = lazy(() => import('./BlogPost3'))
-const BlogPost4 = lazy(() => import('./BlogPost4'))
-const BlogPost5 = lazy(() => import('./BlogPost5'))
-const BlogPost6 = lazy(() => import('./BlogPost6'))
-const BlogPost7 = lazy(() => import('./BlogPost7'))
-const BlogPost8 = lazy(() => import('./BlogPost8'))
-const BlogPost9 = lazy(() => import('./BlogPost9'))
-const BlogPost10 = lazy(() => import('./BlogPost10'))
-const BlogPost11 = lazy(() => import('./BlogPost11'))
-const BlogPost12 = lazy(() => import('./BlogPost12'))
-const BlogPost13 = lazy(() => import('./BlogPost13'))
-const BlogPost14 = lazy(() => import('./BlogPost14'))
-const BlogPost15 = lazy(() => import('./BlogPost15'))
-const BlogPost16 = lazy(() => import('./BlogPost16'))
-const BlogPost17 = lazy(() => import('./BlogPost17'))
-const BlogPost18 = lazy(() => import('./BlogPost18'))
-const BlogPost19 = lazy(() => import('./BlogPost19'))
-const BlogPost20 = lazy(() => import('./BlogPost20'))
-const BlogPost21 = lazy(() => import('./BlogPost21'))
-const BlogPost22 = lazy(() => import('./BlogPost22'))
-const BlogPost23 = lazy(() => import('./BlogPost23'))
-const BlogPost24 = lazy(() => import('./BlogPost24'))
-const BlogPost25 = lazy(() => import('./BlogPost25'))
-const BlogPost26 = lazy(() => import('./BlogPost26'))
-const BlogPost27 = lazy(() => import('./BlogPost27'))
-const BlogPost28 = lazy(() => import('./BlogPost28'))
-const BlogPost29 = lazy(() => import('./BlogPost29'))
-const BlogPost30 = lazy(() => import('./BlogPost30'))
-const BlogPost31 = lazy(() => import('./BlogPost31'))
+// Direct imports instead of lazy loading (this file is already lazy-loaded in App.jsx)
+import BlogPost1 from './BlogPost1'
+import BlogPost2 from './BlogPost2'
+import BlogPost3 from './BlogPost3'
+import BlogPost4 from './BlogPost4'
+import BlogPost5 from './BlogPost5'
+import BlogPost6 from './BlogPost6'
+import BlogPost7 from './BlogPost7'
+import BlogPost8 from './BlogPost8'
+import BlogPost9 from './BlogPost9'
+import BlogPost10 from './BlogPost10'
+import BlogPost11 from './BlogPost11'
+import BlogPost12 from './BlogPost12'
+import BlogPost13 from './BlogPost13'
+import BlogPost14 from './BlogPost14'
+import BlogPost15 from './BlogPost15'
+import BlogPost16 from './BlogPost16'
+import BlogPost17 from './BlogPost17'
+import BlogPost18 from './BlogPost18'
+import BlogPost19 from './BlogPost19'
+import BlogPost20 from './BlogPost20'
+import BlogPost21 from './BlogPost21'
+import BlogPost22 from './BlogPost22'
+import BlogPost23 from './BlogPost23'
+import BlogPost24 from './BlogPost24'
+import BlogPost25 from './BlogPost25'
+import BlogPost26 from './BlogPost26'
+import BlogPost27 from './BlogPost27'
+import BlogPost28 from './BlogPost28'
+import BlogPost29 from './BlogPost29'
+import BlogPost30 from './BlogPost30'
+import BlogPost31 from './BlogPost31'
 
 const BlogPost = () => {
   const { slug } = useParams()
@@ -99,15 +99,8 @@ const BlogPost = () => {
     )
   }
   
-  return (
-    <Suspense fallback={
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600"></div>
-      </div>
-    }>
-      <BlogComponent />
-    </Suspense>
-  )
+  // No Suspense needed since we're using direct imports
+  return <BlogComponent />
 }
 
 export default BlogPost

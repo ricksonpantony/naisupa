@@ -22,7 +22,7 @@ export default defineConfig({
       output: {
         manualChunks: (id) => {
           if (id.includes('node_modules')) {
-            // CRITICAL FIX: Bundle React, ReactDOM, and Framer Motion together to prevent context issues
+            // CRITICAL FIX: Bundle React, ReactDOM, router and Framer Motion together to prevent context issues
             if (id.includes('react') || id.includes('framer-motion')) {
               // Bundle React core with Framer Motion to share context
               return 'react-vendor'
@@ -49,7 +49,12 @@ export default defineConfig({
             return 'interactive'
           }
           
-          // Blog-related components
+          // Blog posts - keep together but separate from main bundle
+          if (id.includes('/src/pages/blogs/news/BlogPost') && !id.includes('/src/pages/blogs/news/BlogPost.jsx')) {
+            return 'blog-posts'
+          }
+          
+          // Blog layout components
           if (id.includes('/src/components/Blog') || 
               id.includes('/src/pages/blogs/')) {
             return 'blog'

@@ -25,6 +25,14 @@
 ✅ Simplified Vite manual chunking to bundle react-helmet-async with react-vendor
 ✅ Switched from Terser to esbuild minifier (safer for ESM)
 
+#### Error 2: `BlogPost.jsx:5 Cannot read properties of undefined (reading 'lazy')`
+**Problem**: Double lazy-loading issue - BlogPost.jsx was using React.lazy() internally while already being lazy-loaded in App.jsx, causing React to be undefined
+
+**Solution**:
+✅ Changed BlogPost.jsx to use direct imports instead of lazy()
+✅ All 31 blog posts now bundled in the blog-posts chunk
+✅ Single lazy-load point in App.jsx handles the loading
+
 #### Error 2: `supabase.js:6 Cannot access 'ns' before initialization`
 **Problem**: Supabase client was imported at module load time, but not needed for public URLs
 
