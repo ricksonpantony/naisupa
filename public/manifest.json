@@ -1,0 +1,48 @@
+{
+  "name": "Nurse Assist International - NCLEX & OSCE Preparation",
+  "short_name": "NAI",
+  "description": "NCLEX Australia & OSCE preparation by NAI. Expert training for international nurses seeking Australian registration.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#00bcc9",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon",
+      "purpose": "any"
+    },
+    {
+      "src": "/image.png",
+      "sizes": "182x60",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ],
+  "categories": ["education", "medical", "health"],
+  "lang": "en-AU",
+  "dir": "ltr",
+  "shortcuts": [
+    {
+      "name": "NCLEX Course",
+      "short_name": "NCLEX",
+      "description": "NCLEX-RN Preparation Course",
+      "url": "/pages/nclex"
+    },
+    {
+      "name": "OSCE Course",
+      "short_name": "OSCE",
+      "description": "OSCE Preparation Course",
+      "url": "/pages/osce"
+    },
+    {
+      "name": "Contact Us",
+      "short_name": "Contact",
+      "description": "Get in touch with NAI",
+      "url": "/pages/contact"
+    }
+  ]
+}

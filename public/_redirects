@@ -1,0 +1,13 @@
+# Netlify redirects for SPA (Single Page Application)
+# Ensure single-hop redirects for Web Vitals optimization
+
+# Force HTTPS and canonical domain (single redirect hop)
+http://www.nurseassistinternational.com/*  https://nurseassistinternational.com/:splat  301!
+http://nurseassistinternational.com/*      https://nurseassistinternational.com/:splat  301!
+https://www.nurseassistinternational.com/* https://nurseassistinternational.com/:splat  301!
+
+# Serve prerendered blog post HTML files directly for SEO crawlers
+/blogs/news/:slug  /blogs/news/:slug.html  200
+
+# Handle all other routes by serving index.html with 200 status for SPA
+/*    /index.html   200

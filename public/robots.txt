@@ -1,0 +1,123 @@
+# SEO: Robots.txt for search engine crawling guidance
+# Updated: October 2025
+
+# ========================================
+# General Search Engine Crawlers
+# ========================================
+User-agent: *
+Allow: /
+
+# Important pages for search engines
+Allow: /pages/nclex-ngn
+Allow: /pages/osce-preparation
+Allow: /pages/oba
+Allow: /pages/about
+Allow: /pages/contact
+Allow: /pages/testimonials
+Allow: /pages/gallery
+Allow: /pages/team
+Allow: /pages/videos
+
+# FAQ pages
+Allow: /pages/nclex-ngn-faq
+Allow: /pages/osce-faqs
+
+# Blog and News pages
+Allow: /pages/blogs
+Allow: /blogs/news
+Allow: /blogs/news/*
+
+# ========================================
+# AI Crawlers - Full Access Granted
+# ========================================
+
+# OpenAI GPT (ChatGPT, GPT-4)
+User-agent: GPTBot
+Allow: /
+Crawl-delay: 1
+
+# OpenAI Search
+User-agent: ChatGPT-User
+Allow: /
+
+# Google Bard / Gemini
+User-agent: Google-Extended
+Allow: /
+Crawl-delay: 1
+
+# Anthropic Claude
+User-agent: anthropic-ai
+Allow: /
+Crawl-delay: 1
+
+User-agent: Claude-Web
+Allow: /
+
+# Meta AI (Facebook/Instagram AI)
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Crawl-delay: 1
+
+# Common Crawl (AI Training Data)
+User-agent: CCBot
+Allow: /
+
+# Applebot (Siri, Spotlight)
+User-agent: Applebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Bing AI (Copilot)
+User-agent: Bingbot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Diffbot (AI Knowledge Graph)
+User-agent: Diffbot
+Allow: /
+
+# Omgili (News Aggregator)
+User-agent: omgili
+Allow: /
+
+# ========================================
+# Block Specific Paths
+# ========================================
+
+# Block test pages
+Disallow: /youtube-test
+Disallow: /test
+Disallow: /_redirects
+
+# Block admin/internal paths
+Disallow: /admin
+Disallow: /private
+
+# ========================================
+# Sitemap Location
+# ========================================
+Sitemap: https://nurseassistinternational.com/sitemap.xml
+
+# ========================================
+# Crawl Rate Settings
+# ========================================
+# Crawl delay for respectful crawling (1 second between requests)
+Crawl-delay: 1
+
+# ========================================
+# Host Specification
+# ========================================
+Host: https://nurseassistinternational.com

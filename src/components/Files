@@ -1,0 +1,119 @@
+Here’s a practical SEO migration guide for Nurse Assist International. It covers which page URLs you need to keep, the current H1 headings you should replicate, and the existing metadata to carry over. It also outlines the technical steps to migrate from Shopify to a React/Tailwind build (for example using Next.js) without losing your “OSCE” rankings.
+
+1. Maintain current URL & heading structure
+
+The table below lists the key pages on your site. Keep the same URL paths and same H1 headings on the new build (or implement 301 redirects if you need a different path). This preserves relevance signals and helps search engines recognise the content after the migration.
+
+Page	URL (keep or redirect from)	Main H1 heading
+Home	https://nurseassistinternational.com/	Our Story
+nurseassistinternational.com
+
+OSCE preparation	/pages/osce-preparation	Objective Structured Clinical Examination (OSCE)
+nurseassistinternational.com
+
+OBA (Outcome Based Assessment)	/pages/oba	What is Outcome Based Assessment?
+nurseassistinternational.com
+
+NCLEX	/pages/nclex-ngn	What is Next Generation NCLEX (NGN)?
+nurseassistinternational.com
+
+NCLEX FAQ	/pages/nclex-ngn-faq	NEXT GENERATION NCLEX (NGN)
+nurseassistinternational.com
+
+OSCE FAQ	/pages/osce-faqs	OSCE
+nurseassistinternational.com
+
+About	/pages/about	Who We Are
+nurseassistinternational.com
+
+Contact	/pages/contact	Our Offices (section heading on the contact page)
+nurseassistinternational.com
+
+Team	/pages/team	Team
+nurseassistinternational.com
+
+Gallery	/pages/gallery	Gallery (gallery landing page heading)
+nurseassistinternational.com
+
+Videos	/pages/videos	Videos (videos landing page)
+nurseassistinternational.com
+
+News / Blog	/blogs/news	News (blog index)
+nurseassistinternational.com
+Current titles and descriptions to replicate
+
+For each page, keep or improve the <title> and meta description. These come from the Shopify view-source: tags:
+
+Home – Title: “NCLEX & OSCE Preparation | NCLEX Review Classes | NAI”; description mentions that NAI is the only NCLEX & OSCE coaching company helping nurses achieve their dream
+nurseassistinternational.com
+.
+
+OSCE preparation – Title: “OSCE Preparation Course Australia | Registered Nurse Course”; description: NAI provides the best OSCE preparation course and expertly crafted course material
+nurseassistinternational.com
+.
+
+OBA – Title: “OBA – Outcome Based Assessment | OBA Preparation”; description: explains Outcome Based Assessment and how to prepare
+nurseassistinternational.com
+.
+
+NCLEX – Title: “NCLEX Preparation Course & NCLEX Practice Test | NAI”; description: emphasises the expertly designed course and practice tests
+nurseassistinternational.com
+.
+
+NCLEX FAQ – Title: “NCLEX‑NGN‑FAQ” with a generic description (same as the home page)
+nurseassistinternational.com
+.
+
+OSCE FAQ – Title: “OSCE‑FAQS” with the same generic description
+nurseassistinternational.com
+.
+
+About – Title: “About” with a description identical to the home page
+nurseassistinternational.com
+.
+
+Contact – Title: “Contact” with the same generic description
+nurseassistinternational.com
+.
+
+Team, Gallery, Videos and News/Blog pages also use generic titles (“Team”, “Gallery”, “Videos”, “News”) and the same description.
+
+When rebuilding, you can expand or personalise descriptions, but do not remove important keywords such as “OSCE preparation”, “Outcome Based Assessment”, “NCLEX preparation”, “NCLEX FAQ”, etc.
+
+2. Migration checklist for React/Tailwind (e.g., Next.js)
+
+Inventory & map your URLs. Export all current URLs from Shopify (pages, collections, blogs) and mark the ones that drive organic traffic. For any path that changes, create a 301 redirect from the old URL to the new one.
+
+Use server‑rendered React. With frameworks like Next.js or Remix, use static generation (SSG/ISR) or server‑side rendering (SSR) so each page serves full HTML. Avoid shipping only a blank <div id="root">; Google can crawl JavaScript, but HTML is safer and faster.
+
+Preserve content and headings. Keep the same on‑page text, heading hierarchy (H1, H2), and internal links. For instance, the OSCE page should still begin with “Objective Structured Clinical Examination (OSCE)”
+nurseassistinternational.com
+, and the NCLEX page should still explain the Next‑Generation NCLEX exam
+nurseassistinternational.com
+.
+
+Retain or improve metadata. Replicate the <title>, meta description, canonical tags, Open Graph tags, and JSON‑LD schema. Don’t change the titles of high‑ranking pages unless you’re carefully improving them (e.g., adding “Australia” or “2025”).
+
+Optimize performance. Use built‑in image optimisation (e.g., <Image> component in Next.js), compress images, and implement caching. Aim for good Core Web Vitals (LCP < 2.5 s, CLS < 0.1).
+
+Implement structured data. Add JSON‑LD for Organization, LocalBusiness (if you want to highlight your physical offices), Course or FAQ markup.
+
+Keep your sitemap & robots.txt. Auto‑generate an XML sitemap and update it in Google Search Console after the migration. Ensure robots.txt allows crawling of the new site and disallows staging/test domains.
+
+Launch carefully. Lower your DNS TTL, test the React site on a staging domain with the same URL structure and content, and verify pages in Google Search Console’s URL inspection tool. When launching, flip the DNS and immediately submit the new sitemap.
+
+Monitor post‑launch. For several weeks after launch, monitor Search Console for crawl errors (404s, redirect chains) and check that rankings for core keywords like “osce preparation” remain stable. Fix any missing redirects or content mismatches promptly.
+
+3. Recommendations to improve SEO further
+
+Expand and clarify meta descriptions. Some pages (FAQs, About, Contact, Gallery) reuse a generic description. Unique, keyword‑focused descriptions will improve click‑through rates and relevance.
+
+Add structured FAQ markup. On the OSCE and NCLEX FAQ pages, wrap questions and answers in FAQ schema. This can produce rich snippets in search results.
+
+Increase internal linking. From the home page and other pages, link to your high‑value OSCE and NCLEX pages using descriptive anchor text.
+
+Publish fresh content. Continue adding relevant blog posts about OSCE exam tips, Australian nursing pathways, and changes to NCLEX/Outcome‑Based Assessment. Use categories and tags to create topical clusters around OSCE and NCLEX.
+
+Track local SEO signals. If you operate in Melbourne or other cities, add location pages or specify @type":"LocalBusiness" structured data with your business address and contact details.
+
+By following the inventory above and the migration checklist, you can rebuild Nurse Assist International’s site in React and Tailwind without sacrificing your current rankings. Maintaining URL structures, headings, meta tags, and content parity ensures Google sees the new site as a continuation of the old one.

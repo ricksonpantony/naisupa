@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- SEO: XML Sitemap for search engine indexing -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+        
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://nurseassistinternational.com/</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <!-- Course Pages - High Priority -->
+  <url>
+    <loc>https://nurseassistinternational.com/pages/nclex-ngn</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/pages/osce-preparation</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/pages/oba</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- FAQ Pages - Good for SEO -->
+  <url>
+    <loc>https://nurseassistinternational.com/pages/nclex-ngn-faq</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/pages/osce-faqs</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Company Pages -->
+  <url>
+    <loc>https://nurseassistinternational.com/pages/about</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/pages/team</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>quarterly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/pages/contact</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Social Proof Pages -->
+  <url>
+    <loc>https://nurseassistinternational.com/pages/testimonials</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/pages/gallery</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/pages/videos</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <!-- Blog/News Pages -->
+  <url>
+    <loc>https://nurseassistinternational.com/pages/blogs</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news</loc>
+    <lastmod>2025-10-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- All Blog Posts - Optimized for SEO Crawlers -->
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/how-to-prepare-for-your-first-nursing-job-in-australia</loc>
+    <lastmod>2025-10-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/aurn-pathway-explained-step-by-step-guide-for-international-nurses-in-australia</loc>
+    <lastmod>2025-09-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/essential-nursing-knowledge-and-competencies-for-international-nurses-seeking-registration-in-australia-preparing-for-nclex-and-osce-success</loc>
+    <lastmod>2025-07-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/top-5-reasons-to-choose-australia-for-your-rn-journey</loc>
+    <lastmod>2025-05-16</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/becoming-an-rn-in-australia-your-roadmap-to-a-rewarding-career-with-nai</loc>
+    <lastmod>2024-12-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/top-nclex-mistakes-and-how-to-avoid-them-a-guide-to-success</loc>
+    <lastmod>2024-11-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/osce-success-excelling-in-patient-assessment-like-a-pro</loc>
+    <lastmod>2024-11-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/nclex-mastery-breaking-down-infection-control-isolation-precautions</loc>
+    <lastmod>2024-10-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/excelling-in-osce-a-guide-to-clinical-decision-making-under-pressure</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/acing-nclex-prioritization-and-delegation-questions-a-nurses-guide</loc>
+    <lastmod>2024-10-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/the-art-of-answering-nclex-psychosocial-integrity-questions</loc>
+    <lastmod>2024-09-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/australia-a-land-of-growing-opportunities-for-nurses</loc>
+    <lastmod>2024-09-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/the-importance-of-reflective-practice-in-osce-success</loc>
+    <lastmod>2024-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/nai-pioneering-success-in-osce-training-and-inspiring-a-generation-of-nurses</loc>
+    <lastmod>2024-08-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/breaking-down-the-select-all-that-apply-sata-questions-in-nclex</loc>
+    <lastmod>2024-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/navigating-the-nursing-registration-landscape-in-australia-the-outcome-based-assessment-pathway</loc>
+    <lastmod>2024-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/cracking-the-medication-administration-code-safe-practices-for-the-australian-osce</loc>
+    <lastmod>2024-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/managing-anxiety-during-osce-exams</loc>
+    <lastmod>2024-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/mastering-communication-in-high-pressure-scenarios</loc>
+    <lastmod>2024-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/decoding-the-nclex-cat-exam</loc>
+    <lastmod>2024-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/mastering-pharmacology-on-the-nclex</loc>
+    <lastmod>2024-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/silent-station-osce-challenge-guide</loc>
+    <lastmod>2024-08-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/nclex-international-gateway-nursing-careers</loc>
+    <lastmod>2024-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/osce-soft-skills-mastery-guide</loc>
+    <lastmod>2024-08-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/first-aid-importance-australian-nursing</loc>
+    <lastmod>2024-08-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/nai-osce-training-excellence</loc>
+    <lastmod>2024-08-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/nursing-career-diversity-beyond-bedside</loc>
+    <lastmod>2024-08-08</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/crucial-elements-for-mastering-online-osce-review</loc>
+    <lastmod>2024-08-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/nclex-test-taking-strategies-for-success</loc>
+    <lastmod>2024-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/nclex-question-analysis-and-comprehension-techniques</loc>
+    <lastmod>2024-08-11</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://nurseassistinternational.com/blogs/news/nclex-ngn-preparation-balancing-school-and-exam-success</loc>
+    <lastmod>2024-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Forms -->
+  <url>
+    <loc>https://nurseassistinternational.com/pages/referral-form</loc>
+    <lastmod>2024-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+</urlset>
