@@ -1,8 +1,8 @@
 // NAI Service Worker for PWA
-const CACHE_NAME = 'nai-cache-v1';
+// Bump version to invalidate old caches after deploys
+const CACHE_NAME = 'nai-cache-v2';
+// Only pre-cache core static assets that are safe and version-stable
 const urlsToCache = [
-  '/',
-  '/index.html',
   '/manifest.json',
   '/favicon.ico',
   '/image.png'
@@ -44,39 +44,38 @@ self.addEventListener('activate', (event) => {
 
 // Fetch event - network first, fall back to cache
 self.addEventListener('fetch', (event) => {
-  // Skip cross-origin requests
-  if (!event.request.url.startsWith(self.location.origin)) {
+  const { request } = event;
+
+  // Skip cross-origin
+  if (!request.url.startsWith(self.location.origin)) return;
+
+  const accept = request.headers.get('accept') || '';
+  const dest = request.destination;
+
+  // Never cache HTML or app JS/CSS to avoid stale bundle mismatches
+  if (request.mode === 'navigate' || accept.includes('text/html') || dest === 'script' || dest === 'style') {
+    event.respondWith(
+      fetch(request).catch(() => new Response('<!DOCTYPE html><title>Offline</title><h1>You are offline</h1>', { headers: { 'Content-Type': 'text/html' } }))
+    );
     return;
   }
 
-  event.respondWith(
-    fetch(event.request)
-      .then((response) => {
-        // Check if valid response
-        if (!response || response.status !== 200 || response.type !== 'basic') {
+  // For images/fonts and other static assets: network-first with cache fallback
+  if (dest === 'image' || dest === 'font' || dest === 'audio' || dest === 'video') {
+    event.respondWith(
+      fetch(request)
+        .then((response) => {
+          if (response && response.status === 200 && response.type === 'basic') {
+            const copy = response.clone();
+            caches.open(CACHE_NAME).then((cache) => cache.put(request, copy));
+          }
           return response;
-        }
+        })
+        .catch(() => caches.match(request))
+    );
+    return;
+  }
 
-        // Clone the response
-        const responseToCache = response.clone();
-
-        caches.open(CACHE_NAME)
-          .then((cache) => {
-            cache.put(event.request, responseToCache);
-          });
-
-        return response;
-      })
-      .catch(() => {
-        // Network failed, try cache
-        return caches.match(event.request)
-          .then((response) => {
-            if (response) {
-              return response;
-            }
-            // Return offline page if available
-            return caches.match('/index.html');
-          });
-      })
-  );
+  // Default: just go to network
+  event.respondWith(fetch(request));
 });

@@ -24,22 +24,12 @@ export default defineConfig({
           if (id.includes('node_modules')) {
             // CRITICAL FIX: Bundle React, ReactDOM, and Framer Motion together to prevent context issues
             if (id.includes('react') || id.includes('framer-motion')) {
-              if (id.includes('react-router-dom')) {
-                return 'react-router'
-              }
-              if (id.includes('react-helmet')) {
-                return 'helmet'
-              }
               // Bundle React core with Framer Motion to share context
               return 'react-vendor'
             }
             // Lucide Icons - large icon set, separate chunk
             if (id.includes('lucide-react')) {
               return 'icons'
-            }
-            // Helmet for SEO
-            if (id.includes('react-helmet-async')) {
-              return 'helmet'
             }
             // Other vendor libraries
             return 'vendor'
@@ -86,23 +76,8 @@ export default defineConfig({
         }
       }
     },
-    minify: 'terser',
-    terserOptions: {
-      compress: {
-        drop_console: true,
-        drop_debugger: true,
-        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
-        passes: 3,
-        ecma: 2015
-      },
-      mangle: {
-        safari10: true
-      },
-      format: {
-        comments: false,
-        ecma: 2015
-      }
-    },
+    // Use esbuild minifier for safer ESM chunking in production
+    minify: 'esbuild',
     chunkSizeWarningLimit: 800,
     sourcemap: true, // Enable source maps for production debugging
     cssCodeSplit: true,
