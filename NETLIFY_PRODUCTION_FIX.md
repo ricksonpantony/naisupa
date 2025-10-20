@@ -26,12 +26,13 @@
 ✅ Switched from Terser to esbuild minifier (safer for ESM)
 
 #### Error 2: `supabase.js:6 Cannot access 'ns' before initialization`
-**Problem**: Supabase client initialized at module load time, causing TDZ in production build
+**Problem**: Supabase client was imported at module load time, but not needed for public URLs
 
 **Solution**:
-✅ Implemented lazy initialization with Proxy wrapper
-✅ Added fallback values for env variables
-✅ Supabase client now initializes on first access, not at module load
+✅ Removed Supabase client import from `imageStorage.js`
+✅ Only using direct public CDN URLs (no authentication needed)
+✅ Removed admin functions (uploadImage, createStorageBuckets, listBucketFiles)
+✅ Supabase client now only loaded in lazy admin components (ImageUploader, StorageSetup, SupabaseTest)
 
 ### 3. Service Worker Cache Issues
 **Problem**: Service worker caching HTML/JS caused stale bundle mismatches
@@ -67,9 +68,9 @@
    - Kept React/Framer Motion bundled together
 
 3. **`src/lib/supabase.js`**
-   - Implemented lazy initialization with Proxy
-   - Added fallback env values
-   - Prevents TDZ errors in production
+   - No longer imported in production code
+   - Only used by lazy-loaded admin components
+   - Public image URLs don't require Supabase client
 
 4. **`public/service-worker.js`**
    - Bumped version to v2
