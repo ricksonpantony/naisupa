@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Heart, FlaskConical, Users, FileText, Award, Target, Zap } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost20 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost20 = () => {
     author: 'Pharmacology Education Team',
     category: 'NCLEX Mastery',
     excerpt: 'Master NCLEX pharmacology with comprehensive drug classifications, safety protocols, and effective learning strategies. Build confidence in medication knowledge and clinical application.',
-    featuredImage: '/Images/nursing-education.webp',
+    featuredImage: getGeneralImageUrl('nursing-education.webp'),
     tags: ['Pharmacology', 'NCLEX', 'Medication Safety', 'Drug Classifications', 'Nursing Education', 'Clinical Practice'],
     views: 11567,
     likes: 623,
@@ -632,7 +633,7 @@ const BlogPost20 = () => {
                     </h3>
                     <div className="text-center mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="Pharmacology Education Team" 
                         className="w-16 h-16 rounded-full object-cover mx-auto mb-3 border-2 border-nai-teal/200"
                       />

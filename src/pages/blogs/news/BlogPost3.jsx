@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, MapPin, DollarSign, Users, Shield, Star } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost3 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost3 = () => {
     author: 'NAI Career Team',
     category: 'Career Guidance',
     excerpt: 'Why should you pick Australia as the destination for your registered-nurse journey? Here are five compelling reasons.',
-    featuredImage: '/blog-images/b3.webp',
+    featuredImage: getBlogImageUrl('b3.webp'),
     tags: ['Australia', 'Career', 'Benefits', 'Salary', 'Lifestyle', 'Immigration'],
     views: 4521,
     likes: 127,
@@ -629,7 +630,7 @@ const BlogPost3 = () => {
                     </h3>
                     <div className="text-center mb-3 sm:mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Career Team" 
                         className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 sm:mb-3 border-2 border-nai-teal"
                       />

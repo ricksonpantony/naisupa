@@ -4,6 +4,7 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ChevronLeft, ChevronRight, X, Quote, Star, Award, MapPin, Calendar, Trophy, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../utils/imageStorage'
 
 // Real testimonials from the testimonials page
 const realTestimonials = [
@@ -11,7 +12,7 @@ const realTestimonials = [
     id: 1,
     name: "Geordy George",
     course: "OSCE",
-    image: "/Gallery/NAI GALLERY/Students/Geordy George.webp",
+    image: getGalleryImageUrl('NAI GALLERY/Students/Geordy George.webp'),
     quote: "I recently cleared my Australia OSCE and couldn't be happier with the support and guidance I received from NAI!",
     testimonial: "The training was comprehensive, well-structured, and focused on real exam scenarios. The instructors Preeti mam, Georgi sir, Geeta mam and Reena were knowledgeable, patient, and always ready to clarify doubts, which gave me the confidence I needed. The mock exam was really an eye opener for me and feedbacks were especially helpful in improving my clinical skills and communication. Thanks to their support, I successfully passed my OSCE on the first attempt!",
     score: "PASS",
@@ -27,7 +28,7 @@ const realTestimonials = [
     id: 2,
     name: "Nimrat Kaur",
     course: "OSCE",
-    image: "/Gallery/NAI GALLERY/Students/Nimrat Kaur.webp",
+    image: getGalleryImageUrl('NAI GALLERY/Students/Nimrat Kaur.webp'),
     quote: "With your support, guidance and appreciation I pass my OSCE exam. Thanks Georgi sir, Geeta ma'am, preeti ma'am and Rena ma'am.",
     testimonial: "I would like to thank you whole NAI team. With your support, guidance and appreciation I pass my OSCE exam. Thanks Georgi sir, Geeta ma'am, preeti ma'am and Rena ma'am. I highly recommend NAI to anyone who wants to pass their OSCE. You'll be in great hands!!",
     score: "PASS",
@@ -43,7 +44,7 @@ const realTestimonials = [
     id: 3,
     name: "Jeni Jhonson",
     course: "OSCE",
-    image: "/Gallery/NAI GALLERY/Students/Jeni Jhonson.webp",
+    image: getGalleryImageUrl('NAI GALLERY/Students/Jeni Jhonson.webp'),
     quote: "Thank you NAI family for making this possible, especially Georgi sir and preeti mam for your constant motivation.",
     testimonial: "Thank you NAI family for making this possible, especially Georgi sir and preeti mam for your constant motivation. I still remember the days we have been in the lab, every doubt and the procedures have been cleared that made it so smooth learning.",
     score: "PASS",
@@ -59,7 +60,7 @@ const realTestimonials = [
     id: 4,
     name: "Abhay Sharma",
     course: "NCLEX",
-    image: "/Gallery/NAI GALLERY/Students/Abhay Sharma.webp",
+    image: getGalleryImageUrl('NAI GALLERY/Students/Abhay Sharma.webp'),
     quote: "Fantastic experience with NAI's NCLEX preparation program. The instructors are highly qualified and provide personalized attention.",
     testimonial: "Fantastic experience with NAI's NCLEX preparation program. The instructors are highly qualified and provide personalized attention to each student. The practice questions and test-taking strategies helped me develop the skills needed for successful nursing practice.",
     score: "PASS",
@@ -75,7 +76,7 @@ const realTestimonials = [
     id: 5,
     name: "Airi Sano",
     course: "NCLEX",
-    image: "/Gallery/NAI GALLERY/Students/Airi Sano.webp",
+    image: getGalleryImageUrl('NAI GALLERY/Students/Airi Sano.webp'),
     quote: "NAI provided excellent NCLEX training with experienced instructors who are always ready to help.",
     testimonial: "NAI provided excellent NCLEX training with experienced instructors who are always ready to help. The comprehensive curriculum and practice tests made my preparation journey smooth and successful.",
     score: "PASS",
@@ -91,7 +92,7 @@ const realTestimonials = [
     id: 6,
     name: "Bianca Asuncion",
     course: "OSCE",
-    image: "/Gallery/NAI GALLERY/Students/Bianca Asuncion.webp",
+    image: getGalleryImageUrl('NAI GALLERY/Students/Bianca Asuncion.webp'),
     quote: "NAI provided comprehensive OSCE training that helped me pass on my first attempt.",
     testimonial: "NAI provided comprehensive OSCE training that helped me pass on my first attempt. The mock exams and personalized feedback were exceptional. The instructors created a supportive learning environment that built my confidence for the actual exam.",
     score: "PASS",

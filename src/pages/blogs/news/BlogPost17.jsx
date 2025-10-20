@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Heart, Brain, Users, FileText, Award, Target, Zap } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost17 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost17 = () => {
     author: 'Dr. Sarah Chen & NAI Psychology Team',
     category: 'Exam Performance',
     excerpt: 'Discover effective techniques to manage exam anxiety and perform at your best during OSCE assessments. Learn evidence-based strategies for stress reduction and confidence building.',
-    featuredImage: '/Images/osce.webp',
+    featuredImage: getGeneralImageUrl('osce.webp'),
     tags: ['Anxiety Management', 'OSCE', 'Exam Stress', 'Performance Psychology', 'Mindfulness', 'Study Strategies'],
     views: 5673,
     likes: 289,
@@ -489,7 +490,7 @@ const BlogPost17 = () => {
                     </h3>
                     <div className="text-center mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt={post.author} 
                         className="w-16 h-16 rounded-full object-cover mx-auto mb-3 border-2 border-nai-teal"
                       />

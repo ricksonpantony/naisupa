@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import SeoHead from '../components/SeoHead'
 import { courseJsonLd, breadcrumbJsonLd, BASE_DOMAIN } from '../seo/jsonld'
 import { CheckCircle, Clock, Users, Award, BookOpen, Target, Calendar, DollarSign, Monitor, MapPin, Download, Plus, Minus, Star, Shield, Heart, TrendingUp, MessageCircle, Phone, Stethoscope, Brain, GraduationCap, ArrowRight, Globe, Building, UserCheck } from 'lucide-react'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../utils/imageStorage'
 
 const OSCEPreparationPage = () => {
   const [expandedFAQ, setExpandedFAQ] = useState(null)
@@ -275,7 +276,7 @@ const OSCEPreparationPage = () => {
                   {/* Main Image */}
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                     <img 
-                      src="/Images/ALLTECHZONE_A_highly_realistic_and_detailed_wide_mid-shot_of_a_nursing_student_in_navy_scrubs_performing_a_patient_repositioning_technique_with_a_mannequin_making_eye_contact_during_t.webp" 
+                      src={getGeneralImageUrl('ALLTECHZONE_A_highly_realistic_and_detailed_wide_mid-shot_of_a_nursing_student_in_navy_scrubs_performing_a_patient_repositioning_technique_with_a_mannequin_making_eye_contact_during_t.webp')} 
                       alt="OSCE Training - Nursing Student Practice"
                       className="w-full h-80 object-cover rounded-xl shadow-2xl"
                     />
@@ -359,7 +360,7 @@ const OSCEPreparationPage = () => {
               <div className="relative">
                 <div className="bg-gradient-to-br from-nai-highlight/10 to-nai-deep-teal/10 rounded-2xl p-6">
                   <img 
-                    src="/Images/A_group_of_professional_nurses_in_teal_scrubs_diverse_in_ethnicity_and_gender_standing_together_confidently_with_warm_smiles._Some_nurses_may_hold_clipboards_stethoscopes_or_tablets_t.webp" 
+                    src={getGeneralImageUrl('A_group_of_professional_nurses_in_teal_scrubs_diverse_in_ethnicity_and_gender_standing_together_confidently_with_warm_smiles._Some_nurses_may_hold_clipboards_stethoscopes_or_tablets_t.webp')} 
                     alt="Professional Nurses Team - NAI Success Stories"
                     className="w-full h-64 object-cover rounded-xl shadow-lg"
                   />
@@ -763,37 +764,37 @@ const OSCEPreparationPage = () => {
                 {[
                   {
                     name: "Geordy George",
-                    image: "/Gallery/NAI GALLERY/Students/Geordy George.webp",
+                    image: getGalleryImageUrl('NAI GALLERY/Students/Geordy George.webp'),
                     quote: "I recently cleared my Australia OSCE and couldn't be happier with the support and guidance I received from NAI!",
                     country: "Australia"
                   },
                   {
                     name: "Nimrat Kaur", 
-                    image: "/Gallery/NAI GALLERY/Students/Nimrat Kaur.webp",
+                    image: getGalleryImageUrl('NAI GALLERY/Students/Nimrat Kaur.webp'),
                     quote: "With your support, guidance and appreciation I pass my OSCE exam. Thanks Georgi sir, Geeta ma'am, preeti ma'am and Rena ma'am.",
                     country: "Australia"
                   },
                   {
                     name: "Jeni Jhonson",
-                    image: "/Gallery/NAI GALLERY/Students/Jeni Jhonson.webp", 
+                    image: getGalleryImageUrl('NAI GALLERY/Students/Jeni Jhonson.webp'), 
                     quote: "Thank you NAI family for making this possible, especially Georgi sir and preeti mam for your constant motivation.",
                     country: "Australia"
                   },
                   {
                     name: "Bianca Asuncion",
-                    image: "/Gallery/NAI GALLERY/Students/Bianca Asuncion.webp",
+                    image: getGalleryImageUrl('NAI GALLERY/Students/Bianca Asuncion.webp'),
                     quote: "NAI provided comprehensive OSCE training that helped me pass on my first attempt.",
                     country: "Australia"
                   },
                   {
                     name: "Dax Patel",
-                    image: "/Gallery/NAI GALLERY/Students/Dax Patel.webp",
+                    image: getGalleryImageUrl('NAI GALLERY/Students/Dax Patel.webp'),
                     quote: "Professional and supportive environment at NAI. Great preparation for OSCE exam with practical hands-on training.",
                     country: "Australia"
                   },
                   {
                     name: "Ezina Paudel",
-                    image: "/Gallery/NAI GALLERY/Students/Ezina Paudel.webp",
+                    image: getGalleryImageUrl('NAI GALLERY/Students/Ezina Paudel.webp'),
                     quote: "Thank you NAI team for the excellent guidance and support throughout my OSCE preparation journey.",
                     country: "Australia"
                   }

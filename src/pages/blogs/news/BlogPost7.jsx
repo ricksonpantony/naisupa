@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Shield, Zap, Users, AlertCircle } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost7 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost7 = () => {
     author: 'NAI Infection Control Team',
     category: 'NCLEX Topics',
     excerpt: 'Infection control is a vital component of nursing practice and a frequent topic on the NCLEX. Understanding the four types of isolation precautions and how to apply them will help you answer related questions correctly.',
-    featuredImage: '/blog-images/b7.webp',
+    featuredImage: getBlogImageUrl('b7.webp'),
     tags: ['NCLEX', 'Infection Control', 'Isolation Precautions', 'PPE', 'Standard Precautions'],
     views: 4123,
     likes: 112,
@@ -643,7 +644,7 @@ const BlogPost7 = () => {
                     </h3>
                     <div className="text-center mb-3 sm:mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Editorial Team" 
                         className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 sm:mb-3 border-2 border-nai-teal"
                       />

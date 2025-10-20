@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Brain, Heart } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost2 = () => {
   const [readingProgress, setReadingProgress] = useState(0)
@@ -64,7 +65,7 @@ const BlogPost2 = () => {
     category: 'NCLEX Tips',
     readTime: '',
     excerpt: 'Master the essential nursing knowledge and competencies required for successful NCLEX and OSCE examinations in Australia. Comprehensive guide covering all critical areas for international nurses.',
-    featuredImage: '/blog-images/b2.webp',
+    featuredImage: getBlogImageUrl('b2.webp'),
     tags: ['NCLEX', 'OSCE', 'Nursing Competencies', 'Australia', 'International Nurses', 'AHPRA'],
     views: 1850,
     likes: 67,
@@ -259,7 +260,7 @@ const BlogPost2 = () => {
                     </h3>
                     <div className="text-center mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Editorial Team" 
                         className="w-16 h-16 rounded-full object-cover mx-auto mb-3 border-2 border-nai-teal"
                       />

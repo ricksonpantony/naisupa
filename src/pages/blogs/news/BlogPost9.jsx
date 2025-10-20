@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Target, Users, TrendingUp, Zap } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost9 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost9 = () => {
     author: 'NAI NCLEX Strategy Team',
     category: 'NCLEX Strategy',
     excerpt: 'Many NCLEX questions require you to decide which patient to see first or which tasks to delegate. Here\'s how to tackle them with proven strategies and frameworks.',
-    featuredImage: '/blog-images/b9.webp',
+    featuredImage: getBlogImageUrl('b9.webp'),
     tags: ['NCLEX', 'Prioritization', 'Delegation', 'ABC Framework', 'Maslow\'s Hierarchy'],
     views: 4567,
     likes: 178,
@@ -574,7 +575,7 @@ const BlogPost9 = () => {
                     </h3>
                     <div className="text-center mb-3 sm:mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Editorial Team" 
                         className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 sm:mb-3 border-2 border-nai-teal"
                       />

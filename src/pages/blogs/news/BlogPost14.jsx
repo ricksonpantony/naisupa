@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Heart, Brain, Users, Target, AlertTriangle, Lightbulb, CheckSquare, X } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost14 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost14 = () => {
     author: 'NAI NCLEX Strategy Team',
     category: 'NCLEX Strategy',
     excerpt: '"Select All That Apply" questions intimidate many NCLEX candidates because there is no partial credit. This article demystifies them and offers proven strategies for success.',
-    featuredImage: '/Images/nclex-preparation.webp',
+    featuredImage: getGeneralImageUrl('nclex-preparation.webp'),
     tags: ['NCLEX', 'SATA Questions', 'Test Strategy', 'Critical Thinking', 'Exam Preparation', 'Nursing'],
     views: 4891,
     likes: 234,
@@ -597,7 +598,7 @@ const BlogPost14 = () => {
                   <div className="bg-gradient-to-br from-cyan-500 to-blue-600 text-white rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-lg">
                     <div className="text-center mb-3 sm:mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Newsletter" 
                         className="w-20 h-20 sm:w-24 sm:h-24 md:w-32 md:h-32 object-cover mx-auto mb-3 sm:mb-4 rounded-lg shadow-lg"
                       />

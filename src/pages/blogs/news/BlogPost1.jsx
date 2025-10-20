@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost1 = () => {
   const [readingProgress, setReadingProgress] = useState(0)
@@ -63,7 +64,7 @@ const BlogPost1 = () => {
     category: 'Registration Guide',
     readTime: '',
     excerpt: 'Becoming an Australian Registered Nurse (AURN) is a life-changing achievement for internationally qualified nurses. Not only does it open the door to world-class healthcare opportunities, but it also allows you to live and work in one of the most beautiful, safe and rewarding countries in the world.',
-    featuredImage: '/blog-images/b1.webp',
+    featuredImage: getBlogImageUrl('b1.webp'),
     tags: ['AURN', 'AHPRA', 'NCLEX', 'OSCE', 'Australia', 'Registration',
     ],
     views: 2847,
@@ -259,7 +260,7 @@ const BlogPost1 = () => {
                     </h3>
                     <div className="text-center mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Editorial Team" 
                         className="w-16 h-16 rounded-full object-cover mx-auto mb-3 border-2 border-nai-teal"
                       />

@@ -1,65 +1,67 @@
 // Hero Gallery Images Data
 // You can easily add, remove, or modify images and descriptions here
 
+import { getGalleryImageUrl } from '../utils/imageStorage'
+
 export const heroTestimonials = [
   { 
-    name: "Sarah Johnson", 
+    name: "Aayushma Koirala", 
     course: "NCLEX-RN", 
-    country: "Australia", 
-    img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", 
+    country: "Nepal", 
+    img: getGalleryImageUrl("NAI GALLERY/Students/Aayushma Koirala.webp"), 
     quote: "NAI's program gave me the confidence to pass on my first attempt!" 
   },
   { 
-    name: "Michael Chen", 
+    name: "Abhay Sharma", 
     course: "OSCE", 
-    country: "Singapore", 
-    img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", 
+    country: "India", 
+    img: getGalleryImageUrl("NAI GALLERY/Students/Abhay Sharma.webp"), 
     quote: "The hands-on training was exactly what I needed!" 
   },
   { 
-    name: "Priya Sharma", 
+    name: "Airi Sano", 
     course: "NCLEX-NGN", 
-    country: "India", 
-    img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", 
+    country: "Japan", 
+    img: getGalleryImageUrl("NAI GALLERY/Students/Airi Sano.webp"), 
     quote: "From doubt to success - NAI made it possible!" 
   },
   { 
-    name: "Emma Wilson", 
+    name: "Akindele Titilayo", 
     course: "OSCE", 
-    country: "UK", 
-    img: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", 
+    country: "Nigeria", 
+    img: getGalleryImageUrl("NAI GALLERY/Students/Akindele Titilayo.webp"), 
     quote: "Professional training that delivered results!" 
   },
   { 
-    name: "David Kim", 
+    name: "Aneesha Gottamukkala", 
     course: "NCLEX", 
-    country: "South Korea", 
-    img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80", 
+    country: "India", 
+    img: getGalleryImageUrl("NAI GALLERY/Students/Aneesha Gottamukkala.webp"), 
     quote: "The best investment in my nursing career!" 
   }
 ];
 
 export const heroGridStudents = [
-  { name: "Alex", course: "NCLEX", img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Maria", course: "OSCE", img: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "James", course: "OBA", img: "https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Lisa", course: "NCLEX", img: "https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Ahmed", course: "OSCE", img: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Sophie", course: "NCLEX", img: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Carlos", course: "OSCE", img: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Yuki", course: "OBA", img: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Anna", course: "NCLEX", img: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Mohammed", course: "OSCE", img: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Emma", course: "NCLEX", img: "https://images.unsplash.com/photo-1494790108755-2616b612b5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "David", course: "OSCE", img: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Sarah", course: "NCLEX", img: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Michael", course: "OSCE", img: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Priya", course: "OBA", img: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "John", course: "NCLEX", img: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Fatima", course: "OSCE", img: "https://images.unsplash.com/photo-1554151228-14d9def656e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Robert", course: "NCLEX", img: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Aisha", course: "OSCE", img: "https://images.unsplash.com/photo-1551836022-deb4988cc6c0?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" },
-  { name: "Thomas", course: "OBA", img: "https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" }
+  { name: "Aayushma", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/Students/Aayushma Koirala.webp") },
+  { name: "Abhay", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Abhay Sharma.webp") },
+  { name: "Airi", course: "OBA", img: getGalleryImageUrl("NAI GALLERY/Students/Airi Sano.webp") },
+  { name: "Akindele", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/Students/Akindele Titilayo.webp") },
+  { name: "Aneesha", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Aneesha Gottamukkala.webp") },
+  { name: "Bianca", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/Students/Bianca Asuncion.webp") },
+  { name: "Bunu", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Bunu Maharjan.webp") },
+  { name: "Yuki", course: "OBA", img: getGalleryImageUrl("NAI GALLERY/nurseassistinternational001.jpg") },
+  { name: "Anna", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/nurseassistinternational002.jpg") },
+  { name: "Mohammed", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/nurseassistinternational003.jpg") },
+  { name: "Emma", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/nurseassistinternational004.jpg") },
+  { name: "David", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/nurseassistinternational005.jpg") },
+  { name: "Sarah", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/nurseassistinternational006.jpg") },
+  { name: "Michael", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/nurseassistinternational058.jpg") },
+  { name: "Priya", course: "OBA", img: getGalleryImageUrl("NAI GALLERY/nurseassistinternational059.jpg") },
+  { name: "John", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/nurseassistinternational064.jpg") },
+  { name: "Fatima", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/nurseassistinternational065.jpg") },
+  { name: "Robert", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/nurseassistinternational067.jpg") },
+  { name: "Aisha", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/nurseassistinternational070.jpg") },
+  { name: "Thomas", course: "OBA", img: getGalleryImageUrl("NAI GALLERY/nurseassistinternational071.jpg") }
 ];
 
 // Instructions for adding new images:

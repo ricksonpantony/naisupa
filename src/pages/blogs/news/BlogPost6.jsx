@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Stethoscope, Activity, Heart, UserCheck } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost6 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost6 = () => {
     author: 'NAI OSCE Experts',
     category: 'Clinical Skills',
     excerpt: 'In the Objective Structured Clinical Examination (OSCE), patient assessment is a core competency. Examiners expect you to perform a comprehensive assessment quickly and methodically. Here are the keys to success.',
-    featuredImage: '/blog-images/b6.webp',
+    featuredImage: getBlogImageUrl('b6.webp'),
     tags: ['OSCE', 'Patient Assessment', 'Clinical Skills', 'A to E Assessment', 'Exam Success'],
     views: 3876,
     likes: 134,
@@ -670,7 +671,7 @@ const BlogPost6 = () => {
                     </h3>
                     <div className="text-center mb-3 sm:mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Editorial Team" 
                         className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 sm:mb-3 border-2 border-nai-teal"
                       />

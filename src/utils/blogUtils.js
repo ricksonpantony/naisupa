@@ -88,7 +88,7 @@ export const blogPostTemplate = {
   category: '',
   readTime: '',
   featured: false,
-  image: '/Images/nursing-education.webp',
+  image: getGeneralImageUrl('nursing-education.webp'),
   tags: [],
   keywords: [],
   readingCategory: 'Article',

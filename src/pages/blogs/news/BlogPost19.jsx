@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Heart, Cpu, Users, FileText, Award, Target, Zap } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost19 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost19 = () => {
     author: 'NCLEX Testing Specialists',
     category: 'NCLEX Preparation',
     excerpt: 'Master the NCLEX Computer Adaptive Testing system with proven strategies for understanding adaptive algorithms, question difficulty patterns, and optimal test-taking approaches.',
-    featuredImage: '/Images/nclex-preparation.webp',
+    featuredImage: getGeneralImageUrl('nclex-preparation.webp'),
     tags: ['NCLEX', 'CAT Testing', 'Computer Adaptive', 'Test Strategy', 'Nursing Licensure', 'Exam Prep'],
     views: 9234,
     likes: 478,
@@ -522,7 +523,7 @@ const BlogPost19 = () => {
                     </h3>
                     <div className="text-center mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NCLEX Testing Specialists" 
                         className="w-16 h-16 rounded-full object-cover mx-auto mb-3 border-2 border-nai-teal/200"
                       />

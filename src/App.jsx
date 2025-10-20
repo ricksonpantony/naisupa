@@ -42,6 +42,9 @@ const BlogPost9 = lazy(() => import('./pages/blogs/news/BlogPost9'))
 const BlogPost10 = lazy(() => import('./pages/blogs/news/BlogPost10'))
 const ReferralFormPage = lazy(() => import('./pages/ReferralFormPage'))
 const YouTubeTestPage = lazy(() => import('./pages/YouTubeTestPage'))
+const SupabaseTest = lazy(() => import('./components/SupabaseTest'))
+const StorageSetup = lazy(() => import('./components/StorageSetup'))
+const ImageUploader = lazy(() => import('./components/ImageUploader'))
 
 function App() {
   const [showDeferredComponents, setShowDeferredComponents] = useState(false)
@@ -197,6 +200,30 @@ function App() {
               element={
                 <LazyComponent fallback={<PageLoadingFallback />}>
                   <YouTubeTestPage />
+                </LazyComponent>
+              } 
+            />
+            <Route 
+              path="/supabase-test" 
+              element={
+                <LazyComponent fallback={<PageLoadingFallback />}>
+                  <SupabaseTest />
+                </LazyComponent>
+              } 
+            />
+            <Route 
+              path="/storage-setup" 
+              element={
+                <LazyComponent fallback={<PageLoadingFallback />}>
+                  <StorageSetup />
+                </LazyComponent>
+              } 
+            />
+            <Route 
+              path="/upload-images" 
+              element={
+                <LazyComponent fallback={<PageLoadingFallback />}>
+                  <ImageUploader />
                 </LazyComponent>
               } 
             />

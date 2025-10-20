@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import SeoHead from '../components/SeoHead'
 import { courseJsonLd, breadcrumbJsonLd, BASE_DOMAIN } from '../seo/jsonld'
 import { CheckCircle, BookOpen, Target, Users, Award, Clock, Brain, Zap, Download, Plus, Minus, Star, Shield, Heart, TrendingUp, MessageCircle, Phone, Stethoscope, GraduationCap, ArrowRight, Globe, Building, UserCheck, Calendar } from 'lucide-react'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../utils/imageStorage'
 
 const NCLEXPage = () => {
   const [expandedFAQ, setExpandedFAQ] = useState(null)
@@ -307,7 +308,7 @@ const NCLEXPage = () => {
                   {/* Main Image */}
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                     <img 
-                      src="/Images/A_group_of_professional_nurses_in_teal_scrubs_diverse_in_ethnicity_and_gender_standing_together_confidently_with_warm_smiles._Some_nurses_may_hold_clipboards_stethoscopes_or_tablets_t.webp" 
+                      src={getGeneralImageUrl('A_group_of_professional_nurses_in_teal_scrubs_diverse_in_ethnicity_and_gender_standing_together_confidently_with_warm_smiles._Some_nurses_may_hold_clipboards_stethoscopes_or_tablets_t.webp')} 
                       alt="NCLEX Training - Professional Nurses Team"
                       className="w-full h-80 object-cover rounded-xl shadow-2xl"
                     />
@@ -1048,32 +1049,32 @@ const NCLEXPage = () => {
                 {[
                   {
                     name: "Abhay Sharma",
-                    image: "/Gallery/NAI GALLERY/Students/Abhay Sharma.webp",
+                    image: getGalleryImageUrl('NAI GALLERY/Students/Abhay Sharma.webp'),
                     quote: "Fantastic experience with NAI's NCLEX preparation program. The instructors are highly qualified and provide personalized attention."
                   },
                   {
                     name: "Airi Sano", 
-                    image: "/Gallery/NAI GALLERY/Students/Airi Sano.webp",
+                    image: getGalleryImageUrl('NAI GALLERY/Students/Airi Sano.webp'),
                     quote: "NAI provided excellent NCLEX training with experienced instructors who are always ready to help."
                   },
                   {
                     name: "Aneesha Gottamukkala",
-                    image: "/Gallery/NAI GALLERY/Students/Aneesha Gottamukkala.webp", 
+                    image: getGalleryImageUrl('NAI GALLERY/Students/Aneesha Gottamukkala.webp'), 
                     quote: "Thank you NAI for the comprehensive NCLEX training. The structured approach and expert guidance helped me pass my exam successfully."
                   },
                   {
                     name: "Ghah Eukeria",
-                    image: "/Gallery/NAI GALLERY/Students/Ghah Eukeria.webp",
+                    image: getGalleryImageUrl('NAI GALLERY/Students/Ghah Eukeria.webp'),
                     quote: "NAI provided exceptional NCLEX training with experienced instructors who genuinely care about student success."
                   },
                   {
                     name: "Jannis",
-                    image: "/Gallery/NAI GALLERY/Students/Jannis.webp",
+                    image: getGalleryImageUrl('NAI GALLERY/Students/Jannis.webp'),
                     quote: "Thank you NAI team for the excellent support and guidance. The NCLEX training program is comprehensive and well-structured."
                   },
                   {
                     name: "Linisha Parajuli",
-                    image: "/Gallery/NAI GALLERY/Students/Linisha Parajuli.webp",
+                    image: getGalleryImageUrl('NAI GALLERY/Students/Linisha Parajuli.webp'),
                     quote: "Excellent training experience with NAI. The NCLEX preparation program is comprehensive and the instructors provide personalized attention."
                   }
                 ].map((testimonial, index) => (

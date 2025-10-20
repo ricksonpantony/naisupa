@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Briefcase, GraduationCap, Award, MapPin } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost4 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost4 = () => {
     author: 'NAI OSCE Experts',
     category: 'OSCE Preparation',
     excerpt: 'Master the A to E patient assessment approach and ace your OSCE with expert tips, practical techniques, and proven strategies from NAI.',
-    featuredImage: '/blog-images/b4.webp',
+    featuredImage: getBlogImageUrl('b4.webp'),
     tags: ['OSCE', 'Patient Assessment', 'A to E Approach', 'Clinical Skills', 'AHPRA', 'NAI'],
     views: 2876,
     likes: 98,
@@ -768,7 +769,7 @@ const BlogPost4 = () => {
                     </h3>
                     <div className="text-center mb-3 sm:mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Editorial Team" 
                         className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 sm:mb-3 border-2 border-nai-teal"
                       />

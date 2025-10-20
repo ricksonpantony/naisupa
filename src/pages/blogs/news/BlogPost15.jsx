@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Heart, MapPin, Users, FileText, Award, Globe, Shield, Target } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost15 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost15 = () => {
     author: 'NAI Registration Experts',
     category: 'Registration Process',
     excerpt: 'The Outcome‑Based Assessment (OBA) pathway allows internationally educated nurses to obtain registration in Australia through a structured process including NCLEX‑RN, OSCE, and supervised practice.',
-    featuredImage: '/Images/australia-nursing.webp',
+    featuredImage: getGeneralImageUrl('australia-nursing.webp'),
     tags: ['OBA', 'Australian Registration', 'International Nurses', 'NCLEX', 'OSCE', 'AHPRA'],
     views: 6234,
     likes: 287,
@@ -398,7 +399,7 @@ const BlogPost15 = () => {
                     </h3>
                     <div className="text-center mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt={post.author} 
                         className="w-16 h-16 rounded-full object-cover mx-auto mb-3 border-2 border-nai-teal"
                       />

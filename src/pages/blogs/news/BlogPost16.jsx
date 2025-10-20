@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Heart, Shield, Users, FileText, Award, Target, AlertTriangle } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost16 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost16 = () => {
     author: 'OSCE Clinical Specialists',
     category: 'OSCE Preparation',
     excerpt: 'Master medication administration principles and safety protocols essential for passing the Australian OSCE exam, including the 6 rights, error prevention, and clinical calculations.',
-    featuredImage: '/Images/medication-safety.webp',
+    featuredImage: getGeneralImageUrl('medication-safety.webp'),
     tags: ['OSCE', 'Medication Safety', 'Clinical Skills', 'Australian Nursing', 'Drug Administration', 'Patient Safety'],
     views: 7892,
     likes: 356,
@@ -469,7 +470,7 @@ const BlogPost16 = () => {
                     </h3>
                     <div className="text-center mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt={post.author} 
                         className="w-16 h-16 rounded-full object-cover mx-auto mb-3 border-2 border-nai-teal"
                       />

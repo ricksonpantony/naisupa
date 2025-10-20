@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Heart, Trophy, Users, Star, Award, Target, TrendingUp, Lightbulb } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost13 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost13 = () => {
     author: 'NAI Leadership Team',
     category: 'NAI Excellence',
     excerpt: 'NAI has earned a reputation for producing outstanding OSCE results with 99% pass rate, unlimited training access, expert instructors, and personalized feedback that empowers nurses beyond the classroom.',
-    featuredImage: '/Images/nursing-education.webp',
+    featuredImage: getGeneralImageUrl('nursing-education.webp'),
     tags: ['NAI', 'OSCE Training', 'Nursing Education', 'Success Stories', 'Professional Development', 'Excellence'],
     views: 5128,
     likes: 243,
@@ -537,7 +538,7 @@ const BlogPost13 = () => {
                     </h3>
                     <div className="text-center mb-3 sm:mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Editorial Team" 
                         className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 sm:mb-3 border-2 border-gray-200"
                       />

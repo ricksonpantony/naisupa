@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Heart, Brain, Users, Target, BarChart3, TrendingUp, Lightbulb, RefreshCw } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost12 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost12 = () => {
     author: 'NAI OSCE Excellence Team',
     category: 'OSCE Success',
     excerpt: 'Reflective practice is a powerful tool for improving performance in the OSCE. It involves systematically evaluating your experiences to identify strengths and areas for improvement.',
-    featuredImage: '/blog-images/b12.webp',
+    featuredImage: getBlogImageUrl('b12.webp'),
     tags: ['OSCE', 'Reflective Practice', 'Clinical Skills', 'Self-Assessment', 'Professional Development', 'Learning'],
     views: 3842,
     likes: 156,
@@ -641,7 +642,7 @@ const BlogPost12 = () => {
                     </h3>
                     <div className="text-center mb-3 sm:mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Editorial Team" 
                         className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 sm:mb-3 border-2 border-gray-200"
                       />

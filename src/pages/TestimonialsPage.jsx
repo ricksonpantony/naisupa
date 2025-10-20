@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Quote, Star, Heart, Award, ChevronLeft, ChevronRight, Users, BookOpen, Globe } from 'lucide-react'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../utils/imageStorage'
 
 const TestimonialsPage = () => {
   const [selectedTestimonial, setSelectedTestimonial] = useState(null)
@@ -16,217 +17,217 @@ const TestimonialsPage = () => {
       id: 1,
       name: "Geordy George",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Geordy George.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Geordy George.webp'),
       text: "I recently cleared my Australia OSCE and couldn't be happier with the support and guidance I received from NAI! The training was comprehensive, well-structured, and focused on real exam scenarios. The instructors Preeti mam, Georgi sir, Geeta mam and Reena were knowledgeable, patient, and always ready to clarify doubts, which gave me the confidence I needed. The mock exam was really an eye opener for me and feedbacks were especially helpful in improving my clinical skills and communication. Thanks to their support, I successfully passed my OSCE on the first attempt! I highly recommend NAI to anyone preparing for the Australian nursing registration. Big thanks to Anshu mam, Jess and Rachel. Definitely all of you are the part of my success. You guys make me proud. Once again thank You so much. GOD BLESS YOU ALL. Always remember those days!!!"
     },
     {
       id: 2,
       name: "Nimrat Kaur",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Nimrat Kaur.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Nimrat Kaur.webp'),
       text: "I would like to thank you whole NAI team. With your support, guidance and appreciation I pass my OSCE exam. Thanks Georgi sir, Geeta ma'am, preeti ma'am and Rena ma'am. I highly recommend NAI to anyone who wants to pass their OSCE. You'll be in great hands!!"
     },
     {
       id: 3,
       name: "Jeni Jhonson",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Jeni Jhonson.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Jeni Jhonson.webp'),
       text: "Thank you NAI family for making this possible, especially Georgi sir and preeti mam for your constant motivation. I still remember the days we have been in the lab, every doubt and the procedures have been cleared that made it so smooth learning."
     },
     {
       id: 4,
       name: "Aayushma Koirala",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Aayushma Koirala.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Aayushma Koirala.webp'),
       text: "Excellent training center with experienced instructors. The hands-on practice sessions were invaluable for my OSCE preparation. NAI's comprehensive approach and dedicated support made all the difference in my nursing career journey. Highly recommend to all aspiring nurses."
     },
     {
       id: 5,
       name: "Bianca Asuncion",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Bianca Asuncion.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Bianca Asuncion.webp'),
       text: "NAI provided comprehensive OSCE training that helped me pass on my first attempt. The mock exams and personalized feedback were exceptional. The instructors created a supportive learning environment that built my confidence for the actual exam."
     },
     {
       id: 6,
       name: "Dax Patel",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Dax Patel.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Dax Patel.webp'),
       text: "Professional and supportive environment at NAI. The instructors are knowledgeable and always ready to help. Great preparation for OSCE exam with practical hands-on training that mirrors real clinical scenarios."
     },
     {
       id: 7,
       name: "Ezina Paudel",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Ezina Paudel.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Ezina Paudel.webp'),
       text: "Thank you NAI team for the excellent guidance and support throughout my OSCE preparation journey. The training was thorough and effective, with personalized attention that helped me identify and improve my weak areas."
     },
     {
       id: 8,
       name: "Jaskaran Singh",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Jaskaran Singh.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Jaskaran Singh.webp'),
       text: "Outstanding OSCE preparation program. The practical sessions and expert guidance from NAI instructors made all the difference in my success. The structured approach and continuous support helped me achieve my nursing registration goals."
     },
     {
       id: 9,
       name: "Johanna Mae Dela Torre",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Johanna Mae Dela Torre.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Johanna Mae Dela Torre.webp'),
       text: "NAI's OSCE training program exceeded my expectations. The structured approach and dedicated instructors helped me achieve my nursing registration goals. The practical training sessions were incredibly valuable for building clinical confidence."
     },
     {
       id: 10,
       name: "Libni Paul",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Libni Paul.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Libni Paul.webp'),
       text: "Grateful for the comprehensive training and support from NAI. The mock exams and feedback sessions were particularly helpful for my OSCE success. The instructors provided excellent guidance throughout my preparation journey."
     },
     {
       id: 11,
       name: "Mia Raven",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Mia Raven.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Mia Raven.webp'),
       text: "Excellent OSCE preparation with NAI. The hands-on training and expert guidance gave me the confidence to pass my exam successfully. The supportive learning environment made all the difference in my nursing career."
     },
     {
       id: 12,
       name: "Priyanka Patel",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Priyanka Patel.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Priyanka Patel.webp'),
       text: "NAI's training program is comprehensive and well-structured. The instructors are experienced and provide excellent support throughout the preparation. Highly recommend for anyone serious about their nursing registration."
     },
     {
       id: 13,
       name: "Abhay Sharma",
       course: "NCLEX",
-      image: "/Gallery/NAI GALLERY/Students/Abhay Sharma.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Abhay Sharma.webp'),
       text: "Fantastic experience with NAI's NCLEX preparation program. The instructors are highly qualified and provide personalized attention to each student. The practice questions and test-taking strategies helped me develop the skills needed for successful nursing practice."
     },
     {
       id: 14,
       name: "Airi Sano",
       course: "NCLEX",
-      image: "/Gallery/NAI GALLERY/Students/Airi Sano.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Airi Sano.webp'),
       text: "NAI provided excellent NCLEX training with experienced instructors who are always ready to help. The comprehensive curriculum and practice tests made my preparation journey smooth and successful."
     },
     {
       id: 15,
       name: "Akindele Titilayo",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Akindele Titilayo.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Akindele Titilayo.webp'),
       text: "Outstanding support from NAI team throughout my OSCE preparation. The training methodology is excellent and the instructors provide valuable feedback that helps improve clinical skills and confidence."
     },
     {
       id: 16,
       name: "Aneesha Gottamukkala",
       course: "NCLEX",
-      image: "/Gallery/NAI GALLERY/Students/Aneesha Gottamukkala.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Aneesha Gottamukkala.webp'),
       text: "Thank you NAI for the comprehensive NCLEX training. The structured approach and expert guidance helped me pass my exam successfully. The practice questions were particularly helpful in building confidence."
     },
     {
       id: 17,
       name: "Bunu Maharjan",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Bunu Maharjan.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Bunu Maharjan.webp'),
       text: "Excellent training center with professional instructors. NAI's OSCE preparation program is well-designed and effective. The hands-on practice sessions and personalized feedback made all the difference in my success."
     },
     {
       id: 18,
       name: "Ghah Eukeria",
       course: "NCLEX",
-      image: "/Gallery/NAI GALLERY/Students/Ghah Eukeria.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Ghah Eukeria.webp'),
       text: "NAI provided exceptional NCLEX training with experienced instructors who genuinely care about student success. The comprehensive program and supportive environment helped me achieve my nursing registration goals."
     },
     {
       id: 19,
       name: "Hadi Ahmadi",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Hadi Ahmadi.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Hadi Ahmadi.webp'),
       text: "Great experience with NAI's OSCE preparation program. The instructors are knowledgeable and provide excellent guidance throughout the training. The practical sessions helped build the confidence needed for exam success."
     },
     {
       id: 20,
       name: "Jannis",
       course: "NCLEX",
-      image: "/Gallery/NAI GALLERY/Students/Jannis.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Jannis.webp'),
       text: "Thank you NAI team for the excellent support and guidance. The NCLEX training program is comprehensive and well-structured. The instructors provided valuable feedback that helped me improve my test-taking skills."
     },
     {
       id: 21,
       name: "Jesse Brian",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Jesse Brian.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Jesse Brian.webp'),
       text: "Outstanding OSCE preparation with NAI. The training program is thorough and the instructors are highly experienced. The hands-on practice and mock exams were instrumental in my exam success."
     },
     {
       id: 22,
       name: "Linisha Parajuli",
       course: "NCLEX",
-      image: "/Gallery/NAI GALLERY/Students/Linisha Parajuli.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Linisha Parajuli.webp'),
       text: "Excellent training experience with NAI. The NCLEX preparation program is comprehensive and the instructors provide personalized attention. The supportive learning environment helped me achieve my nursing goals."
     },
     {
       id: 23,
       name: "Malek Al Talafha",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Malek Al Talafha.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Malek Al Talafha.webp'),
       text: "NAI provided exceptional OSCE training that helped me pass my exam successfully. The instructors are professional and knowledgeable, providing excellent guidance throughout the preparation process."
     },
     {
       id: 24,
       name: "Regina Abi",
       course: "NCLEX",
-      image: "/Gallery/NAI GALLERY/Students/Regina Abi.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Regina Abi.webp'),
       text: "Thank you NAI for the comprehensive NCLEX training program. The structured approach and expert instruction helped me build the confidence and skills needed for successful nursing practice."
     },
     {
       id: 25,
       name: "Sangita Bhusal",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Sangita Bhusal.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Sangita Bhusal.webp'),
       text: "Excellent experience with NAI's OSCE preparation. The training is thorough and the instructors provide valuable feedback. The hands-on practice sessions were particularly helpful for building clinical confidence."
     },
     {
       id: 26,
       name: "Saritha",
       course: "NCLEX",
-      image: "/Gallery/NAI GALLERY/Students/Saritha.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Saritha.webp'),
       text: "NAI provided outstanding NCLEX training with experienced instructors who are dedicated to student success. The comprehensive program and supportive environment made my preparation journey successful."
     },
     {
       id: 27,
       name: "Sonam Palden",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Sonam Palden.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Sonam Palden.webp'),
       text: "Great training experience with NAI. The OSCE preparation program is well-designed and effective. The instructors provide excellent guidance and support throughout the learning process."
     },
     {
       id: 28,
       name: "Swastika Parajuli",
       course: "NCLEX",
-      image: "/Gallery/NAI GALLERY/Students/Swastika Parajuli.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Swastika Parajuli.webp'),
       text: "Thank you NAI team for the excellent NCLEX training. The comprehensive program and expert instruction helped me achieve my nursing registration goals. Highly recommend to all aspiring nurses."
     },
     {
       id: 29,
       name: "Tamilarasi",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Tamilarasi.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Tamilarasi.webp'),
       text: "Excellent OSCE preparation with NAI. The training program is thorough and the instructors are highly qualified. The practical sessions and personalized feedback were instrumental in my exam success."
     },
     {
       id: 30,
       name: "Trisha Claire Apillanes",
       course: "NCLEX",
-      image: "/Gallery/NAI GALLERY/Students/Trisha Claire Apillanes.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Trisha Claire Apillanes.webp'),
       text: "NAI provided exceptional NCLEX training that exceeded my expectations. The structured approach and dedicated instructors helped me build the confidence needed for successful nursing practice."
     },
     {
       id: 31,
       name: "Zheena Formaran",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Zheena Formaran.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Zheena Formaran.webp'),
       text: "Outstanding support from NAI throughout my OSCE preparation journey. The comprehensive training program and expert guidance helped me achieve my nursing registration goals successfully."
     }
   ]

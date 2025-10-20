@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../utils/imageStorage'
 import { 
   Heart, 
   Target, 
@@ -193,7 +194,7 @@ const OurStory = () => {
               <div className="relative h-80 sm:h-96 lg:h-[400px] xl:h-[450px] rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
                 <div className="absolute inset-0 bg-gradient-to-br from-nai-highlight/20 to-nai-deep-teal/20 z-10"></div>
                 <img 
-                  src="/Images/ALLTECHZONE_A_highly_realistic_and_detailed_wide_mid-shot_of_a_nursing_student_in_navy_scrubs_performing_a_patient_repositioning_technique_with_a_mannequin_making_eye_contact_during_t.webp" 
+                  src={getGeneralImageUrl('ALLTECHZONE_A_highly_realistic_and_detailed_wide_mid-shot_of_a_nursing_student_in_navy_scrubs_performing_a_patient_repositioning_technique_with_a_mannequin_making_eye_contact_during_t.webp')} 
                   alt="NAI nursing education - Professional nursing student in navy scrubs demonstrating patient care techniques during clinical training"
                   className="absolute inset-0 w-full h-full object-cover"
                   width="400"

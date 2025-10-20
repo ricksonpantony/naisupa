@@ -4,6 +4,7 @@ import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { Heart, Target, Users, Award, Eye, CheckCircle, Clock, BookOpen, Trophy, ArrowRight } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../utils/imageStorage'
 
 const About = () => {
   const ref = useRef(null)
@@ -16,35 +17,35 @@ const About = () => {
       name: "Mr. Thomas Mathew",
       role: "Chief Executive Officer",
       specialization: "Strategic Leadership & Vision",
-      image: "/Team/CEO Mr. Thomas Mathew.avif",
+      image: getTeamImageUrl('CEO Mr. Thomas Mathew.avif'),
       achievements: ["Visionary Leader", "Healthcare Innovation", "Global Expansion Expert"]
     },
     {
       name: "Mr. Georgi Mathew",
       role: "Director",
       specialization: "Operations & Business Development",
-      image: "/Team/Managing Director Mr. Georgi Mathew.jpg",
+      image: getTeamImageUrl('Managing Director Mr. Georgi Mathew.jpg'),
       achievements: ["Operations Excellence", "Strategic Planning", "International Relations"]
     },
     {
       name: "Ms. Preeti",
       role: "Lead Educator",
       specialization: "Educational Leadership & Program Development",
-      image: "/Team/Ms. Preeti - direcor -Educator.jpg",
+      image: getTeamImageUrl('Ms. Preeti - direcor -Educator.jpg'),
       achievements: ["Educational Leadership", "Curriculum Development", "Student Success Programs"]
     },
     {
       name: "Ms. Geeta",
       role: "Lead Educator",
       specialization: "Student Assessment & Development",
-      image: "/Team/Ms. Geeta Educator.avif",
+      image: getTeamImageUrl('Ms. Geeta Educator.avif'),
       achievements: ["Assessment Expert", "Student Development", "Academic Excellence"]
     },
     {
       name: "Ms. Anusha",
       role: "Senior Administrator",
       specialization: "Administrative Excellence & Student Services",
-      image: "/Team/Senior Administrator Ms. Anusha.avif",
+      image: getTeamImageUrl('Senior Administrator Ms. Anusha.avif'),
       achievements: ["Administrative Leadership", "Process Optimization", "Student Support Services"]
     }
   ]

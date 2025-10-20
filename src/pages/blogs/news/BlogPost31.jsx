@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Briefcase, FileText, Users, Target } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost31 = () => {
   const [readingProgress, setReadingProgress] = useState(0)
@@ -63,7 +64,7 @@ const BlogPost31 = () => {
     category: 'Career Guidance',
     readTime: '8 min read',
     excerpt: 'You\'ve crossed some big milestones—passing your NCLEX or OSCE exam in Australia, completing the paperwork, and officially registering with AHPRA. That\'s no small achievement! Now, the next challenge begins: your very first nursing job interview in Australia.',
-    featuredImage: '/blog-images/b31.webp',
+    featuredImage: getBlogImageUrl('b31.webp'),
     tags: ['Career', 'Job Interview', 'Australia', 'NCLEX', 'OSCE', 'First Job'],
     views: 1287,
     likes: 0,
@@ -462,7 +463,7 @@ const BlogPost31 = () => {
                     </h3>
                     <div className="text-center mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Career Team" 
                         className="w-16 h-16 rounded-full object-cover mx-auto mb-3 border-2 border-nai-teal"
                       />

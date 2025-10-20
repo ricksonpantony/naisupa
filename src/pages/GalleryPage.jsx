@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react'
 import { Helmet } from 'react-helmet-async'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Camera, X, ChevronLeft, ChevronRight, ZoomIn, Heart, Users, Share2, ArrowLeft, ArrowRight } from 'lucide-react'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../utils/imageStorage'
 
 const GalleryPage = () => {
   const [selectedImage, setSelectedImage] = useState(null)
@@ -24,12 +25,20 @@ const GalleryPage = () => {
   // Generate all 270 gallery images - all are JPG files
   const allGalleryImages = Array.from({ length: 270 }, (_, index) => {
     const imageNumber = String(index + 1).padStart(3, '0')
+    const imagePath = `NAI GALLERY/nurseassistinternational${imageNumber}.jpg`
+    const imageUrl = getGalleryImageUrl(imagePath)
+    
+    // Log first few URLs to verify Supabase CDN
+    if (index < 3) {
+      console.log(`Gallery Image ${index + 1}: ${imageUrl}`)
+    }
+    
     return {
       id: index + 1,
-      src: `/Gallery/NAI GALLERY/nurseassistinternational${imageNumber}.jpg`,
+      src: imageUrl,
       title: `NAI Moment ${index + 1}`,
       alt: `NAI Moment ${index + 1} - Capturing precious memories from our nursing journey`,
-      thumbnail: `/Gallery/NAI GALLERY/nurseassistinternational${imageNumber}.jpg`,
+      thumbnail: imageUrl,
     }
   })
 
@@ -267,29 +276,43 @@ const GalleryPage = () => {
           </div>
 
           {/* Floating previews */}
-          <div className="absolute inset-0 overflow-hidden">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
-              <motion.div
-                key={i}
-                className="absolute w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden shadow-2xl border border-white/20"
-                style={{
-                  left: `${15 + (i % 3) * 25}%`,
-                  top: `${20 + Math.floor((i - 1) / 3) * 40}%`,
-                }}
-                animate={{ y: [0, -15, 0], rotate: [0, 3, -3, 0], scale: [1, 1.05, 1] }}
-                transition={{ duration: 6 + i, repeat: Infinity, ease: 'easeInOut', delay: i * 0.5 }}
-                initial={{ opacity: 0, scale: 0 }}
-                whileInView={{ opacity: 0.6, scale: 1 }}
-              >
-                <img
-                  src={`/Gallery/NAI GALLERY/nurseassistinternational${String(i * 15).padStart(3, '0')}.jpg`}
-                  alt={`Preview ${i}`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              </motion.div>
-            ))}
+          <div className="absolute inset-0 overflow-hidden z-10">
+            {[1, 2, 3, 4, 5, 6].map((i) => {
+              const imageNumber = String(i * 15).padStart(3, '0')
+              const heroImageUrl = getGalleryImageUrl(`NAI GALLERY/nurseassistinternational${imageNumber}.jpg`)
+              
+              // Log hero preview URLs
+              if (i === 1) console.log('Hero Preview Images Loading from Supabase:', heroImageUrl)
+              
+              return (
+                <motion.div
+                  key={i}
+                  className="absolute w-16 h-16 md:w-20 md:h-20 rounded-lg overflow-hidden shadow-2xl border border-white/20"
+                  style={{
+                    left: `${15 + (i % 3) * 25}%`,
+                    top: `${20 + Math.floor((i - 1) / 3) * 40}%`,
+                  }}
+                  animate={{ y: [0, -15, 0], rotate: [0, 3, -3, 0], scale: [1, 1.05, 1] }}
+                  transition={{ duration: 6 + i, repeat: Infinity, ease: 'easeInOut', delay: i * 0.5 }}
+                  initial={{ opacity: 0, scale: 0 }}
+                  whileInView={{ opacity: 0.6, scale: 1 }}
+                >
+                  <img
+                    src={heroImageUrl}
+                    alt={`Preview ${i}`}
+                    className="w-full h-full object-cover"
+                    loading="lazy"
+                    onError={(e) => {
+                      console.error(`Failed to load hero preview image ${i}:`, e.target.src)
+                    }}
+                    onLoad={() => {
+                      console.log(`✅ Hero preview ${i} loaded successfully from Supabase`)
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                </motion.div>
+              )
+            })}
           </div>
 
           {/* Hero content */}

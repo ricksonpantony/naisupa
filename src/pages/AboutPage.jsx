@@ -3,6 +3,7 @@ import SeoHead from '../components/SeoHead'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { breadcrumbJsonLd, BASE_DOMAIN } from '../seo/jsonld'
 import { Heart, Target, Eye, Star, CheckCircle, Shield, Clock, Lightbulb, Users, Trophy, MapPin, Phone, Mail, ArrowUp, ArrowRight } from 'lucide-react'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../utils/imageStorage'
 
 const AboutPage = () => {
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -31,7 +32,7 @@ const AboutPage = () => {
     description: "Learn about NAI's 15+ year journey helping international nurses achieve Australian registration. Discover our mission, vision, values, and leadership team guiding 5,000+ successful Nurses.",
     keywords: "about NAI, nursing education Australia, international nurse support, OSCE training, NCLEX preparation, nursing registration Australia, healthcare education, nurse training institute",
     canonical: `${BASE_DOMAIN}/pages/about`,
-    ogImage: `${BASE_DOMAIN}/Images/A_group_of_professional_nurses_in_teal_scrubs_diverse_in_ethnicity_and_gender_standing_together_confidently_with_warm_smiles._Some_nurses_may_hold_clipboards_stethoscopes_or_tablets_t.webp`,
+    ogImage: getGeneralImageUrl('A_group_of_professional_nurses_in_teal_scrubs_diverse_in_ethnicity_and_gender_standing_together_confidently_with_warm_smiles._Some_nurses_may_hold_clipboards_stethoscopes_or_tablets_t.webp'),
     ogType: "website",
     structuredData: [
       breadcrumbJsonLd([
@@ -45,7 +46,7 @@ const AboutPage = () => {
         "alternateName": "NAI",
         "description": "Australia's leading nursing education institute specializing in international nurse registration and career support",
         "url": BASE_DOMAIN,
-        "logo": `${BASE_DOMAIN}/Images/ALLTECHZONE.webp`,
+        "logo": getGeneralImageUrl('ALLTECHZONE.webp'),
         "foundingDate": "2008",
         "founders": [
           {
@@ -132,35 +133,35 @@ const AboutPage = () => {
     {
       name: "Thomas Mathew",
       role: "Chief Executive Officer",
-      image: "/Team/CEO Mr. Thomas Mathew.avif",
+      image: getTeamImageUrl('CEO Mr. Thomas Mathew.avif'),
       bio: "Visionary leader with 20+ years in nursing education and healthcare management",
       expertise: "Strategic Leadership, Healthcare Management"
     },
     {
       name: "Georgi Mathew", 
       role: "Director",
-      image: "/Team/Managing Director Mr. Georgi Mathew.jpg",
+      image: getTeamImageUrl('Managing Director Mr. Georgi Mathew.jpg'),
       bio: "Strategic operations expert ensuring excellence in student outcomes",
       expertise: "Operations Management, Student Success"
     },
     {
       name: "Ms. Preeti",
       role: "Lead Educator",
-      image: "/Team/Ms. Preeti - direcor -Educator.jpg",
+      image: getTeamImageUrl('Ms. Preeti - direcor -Educator.jpg'),
       bio: "Lead educator specializing in OSCE and clinical skills development",
       expertise: "Clinical Education, OSCE Training"
     },
     {
       name: "Ms. Geeta",
       role: "Lead Educator",
-      image: "/Team/Ms. Geeta Educator.avif",
+      image: getTeamImageUrl('Ms. Geeta Educator.avif'),
       bio: "Student assessment and development specialist ensuring academic excellence",
       expertise: "Assessment Expert, Student Development"
     },
     {
       name: "Ms. Anusha",
       role: "Senior Administrator",
-      image: "/Team/Senior Administrator Ms. Anusha.avif",
+      image: getTeamImageUrl('Senior Administrator Ms. Anusha.avif'),
       bio: "Administrative excellence ensuring smooth operations and student support",
       expertise: "Administration, Student Services"
     }
@@ -236,7 +237,7 @@ const AboutPage = () => {
       id: 1,
       name: "Geordy George",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Geordy George.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Geordy George.webp'),
       quote: "I recently cleared my Australia OSCE and couldn't be happier with the support and guidance I received from NAI! Thanks to their support, I successfully passed my OSCE on the first attempt!",
       rating: 5
     },
@@ -244,7 +245,7 @@ const AboutPage = () => {
       id: 2,
       name: "Nimrat Kaur",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Nimrat Kaur.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Nimrat Kaur.webp'),
       quote: "I would like to thank you whole NAI team. With your support, guidance and appreciation I pass my OSCE exam. I highly recommend NAI to anyone who wants to pass their OSCE.",
       rating: 5
     },
@@ -252,7 +253,7 @@ const AboutPage = () => {
       id: 3,
       name: "Jeni Jhonson",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Jeni Jhonson.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Jeni Jhonson.webp'),
       quote: "Thank you NAI family for making this possible, especially Georgi sir and preeti mam for your constant motivation. The procedures have been cleared that made it so smooth learning.",
       rating: 5
     },
@@ -260,7 +261,7 @@ const AboutPage = () => {
       id: 4,
       name: "Aayushma Koirala",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Aayushma Koirala.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Aayushma Koirala.webp'),
       quote: "Excellent training center with experienced instructors. NAI's comprehensive approach and dedicated support made all the difference in my nursing career journey.",
       rating: 5
     },
@@ -268,7 +269,7 @@ const AboutPage = () => {
       id: 5,
       name: "Bianca Asuncion",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Bianca Asuncion.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Bianca Asuncion.webp'),
       quote: "NAI provided comprehensive OSCE training that helped me pass on my first attempt. The mock exams and personalized feedback were exceptional.",
       rating: 5
     },
@@ -276,7 +277,7 @@ const AboutPage = () => {
       id: 6,
       name: "Dax Patel",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Dax Patel.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Dax Patel.webp'),
       quote: "Professional and supportive environment at NAI. Great preparation for OSCE exam with practical hands-on training that mirrors real clinical scenarios.",
       rating: 5
     },
@@ -284,7 +285,7 @@ const AboutPage = () => {
       id: 7,
       name: "Ezina Paudel",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Ezina Paudel.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Ezina Paudel.webp'),
       quote: "Thank you NAI team for the excellent guidance and support throughout my OSCE preparation journey. The training was thorough and effective.",
       rating: 5
     },
@@ -292,7 +293,7 @@ const AboutPage = () => {
       id: 8,
       name: "Jaskaran Singh",
       course: "OSCE",
-      image: "/Gallery/NAI GALLERY/Students/Jaskaran Singh.webp",
+      image: getGalleryImageUrl('NAI GALLERY/Students/Jaskaran Singh.webp'),
       quote: "Outstanding OSCE preparation program. The structured approach and continuous support helped me achieve my nursing registration goals.",
       rating: 5
     }
@@ -442,7 +443,7 @@ const AboutPage = () => {
                   {/* Main Image */}
                   <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                     <img 
-                      src="/Images/A_group_of_professional_nurses_in_teal_scrubs_diverse_in_ethnicity_and_gender_standing_together_confidently_with_warm_smiles._Some_nurses_may_hold_clipboards_stethoscopes_or_tablets_t.webp"
+                      src={getGeneralImageUrl('A_group_of_professional_nurses_in_teal_scrubs_diverse_in_ethnicity_and_gender_standing_together_confidently_with_warm_smiles._Some_nurses_may_hold_clipboards_stethoscopes_or_tablets_t.webp')}
                       alt="Professional nurses at NAI" 
                       className="w-full h-96 object-cover"
                     />
@@ -589,7 +590,7 @@ const AboutPage = () => {
               >
                 <div className="relative rounded-2xl overflow-hidden shadow-2xl">
                   <img 
-                    src="/Images/A_group_of_professional_nurses_in_teal_scrubs_diverse_in_ethnicity_and_gender_standing_together_confidently_with_warm_smiles._Some_nurses_may_hold_clipboards_stethoscopes_or_tablets_t.webp"
+                    src={getGeneralImageUrl('A_group_of_professional_nurses_in_teal_scrubs_diverse_in_ethnicity_and_gender_standing_together_confidently_with_warm_smiles._Some_nurses_may_hold_clipboards_stethoscopes_or_tablets_t.webp')}
                     alt="Professional nurses at NAI" 
                     className="w-full h-96 object-cover"
                   />

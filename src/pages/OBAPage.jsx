@@ -2,6 +2,7 @@ import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import { CheckCircle, BookOpen, Target, Users, Award, Clock, Download, Star, Shield, Heart, TrendingUp, MessageCircle, Phone, Stethoscope, Brain, GraduationCap, ArrowRight, Globe, Building, UserCheck } from 'lucide-react'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../utils/imageStorage'
 
 const OBAPage = () => {
 
@@ -195,7 +196,7 @@ const OBAPage = () => {
                   {/* Main Image */}
                   <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                     <img 
-                      src="/Images/A_group_of_professional_nurses_in_teal_scrubs_diverse_in_ethnicity_and_gender_standing_together_confidently_with_warm_smiles._Some_nurses_may_hold_clipboards_stethoscopes_or_tablets_t.webp" 
+                      src={getGeneralImageUrl('A_group_of_professional_nurses_in_teal_scrubs_diverse_in_ethnicity_and_gender_standing_together_confidently_with_warm_smiles._Some_nurses_may_hold_clipboards_stethoscopes_or_tablets_t.webp')} 
                       alt="OBA Training - Professional Nurses Team"
                       className="w-full h-80 object-cover rounded-xl shadow-2xl"
                     />

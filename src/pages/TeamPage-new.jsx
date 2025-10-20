@@ -1,6 +1,7 @@
 import React from 'react'
 import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../utils/imageStorage'
 
 const TeamPage = () => {
   // Leadership Team
@@ -9,7 +10,7 @@ const TeamPage = () => {
       name: "Mr. Thomas Mathew",
       role: "Chief Executive Officer",
       specialization: "Strategic Leadership & Vision",
-      image: "/Team/CEO Mr. Thomas Mathew.avif",
+      image: getTeamImageUrl('CEO Mr. Thomas Mathew.avif'),
       achievements: ["Visionary Leader", "Healthcare Innovation", "Global Expansion Expert"],
       category: "leadership"
     },
@@ -17,7 +18,7 @@ const TeamPage = () => {
       name: "Mr. Georgi Mathew",
       role: "Director",
       specialization: "Operations & Business Development",
-      image: "/Team/Managing Director Mr. Georgi Mathew.jpg",
+      image: getTeamImageUrl('Managing Director Mr. Georgi Mathew.jpg'),
       achievements: ["Operations Excellence", "Strategic Planning", "International Relations"],
       category: "leadership"
     }
@@ -29,7 +30,7 @@ const TeamPage = () => {
       name: "Ms. Preeti",
       role: "Lead Educator",
       specialization: "Educational Leadership & Program Development",
-      image: "/Team/Ms. Preeti - direcor -Educator.jpg",
+      image: getTeamImageUrl('Ms. Preeti - direcor -Educator.jpg'),
       achievements: ["Educational Leadership", "Curriculum Development", "Student Success Programs"],
       category: "management"
     },
@@ -37,7 +38,7 @@ const TeamPage = () => {
       name: "Ms. Geeta",
       role: "Lead Educator",
       specialization: "Student Assessment & Development",
-      image: "/Team/Ms. Geeta Educator.avif",
+      image: getTeamImageUrl('Ms. Geeta Educator.avif'),
       achievements: ["Assessment Expert", "Student Development", "Academic Excellence"],
       category: "management"
     },
@@ -45,7 +46,7 @@ const TeamPage = () => {
       name: "Ms. Anusha",
       role: "Senior Administrator",
       specialization: "Administrative Excellence & Student Services",
-      image: "/Team/Senior Administrator Ms. Anusha.avif",
+      image: getTeamImageUrl('Senior Administrator Ms. Anusha.avif'),
       achievements: ["Administrative Leadership", "Process Optimization", "Student Support Services"],
       category: "management"
     }
@@ -57,7 +58,7 @@ const TeamPage = () => {
       name: "Mr. Aijaz",
       role: "Educator",
       specialization: "NCLEX & Clinical Skills",
-      image: "/Team/Mr. Aijaz Educator.avif",
+      image: getTeamImageUrl('Mr. Aijaz Educator.avif'),
       achievements: ["NCLEX Specialist", "Clinical Excellence", "Student Mentoring"],
       category: "educator"
     },
@@ -65,7 +66,7 @@ const TeamPage = () => {
       name: "Mr. Bejoy",
       role: "Educator",
       specialization: "OSCE & Practical Training",
-      image: "/Team/Mr. Bejoy Educator.avif",
+      image: getTeamImageUrl('Mr. Bejoy Educator.avif'),
       achievements: ["OSCE Expert", "Practical Skills", "Assessment Specialist"],
       category: "educator"
     },
@@ -73,7 +74,7 @@ const TeamPage = () => {
       name: "Mr. Renz",
       role: "Educator",
       specialization: "International Nursing Standards",
-      image: "/Team/Mr. Renz Educator.avif",
+      image: getTeamImageUrl('Mr. Renz Educator.avif'),
       achievements: ["International Standards", "Quality Assurance", "Training Excellence"],
       category: "educator"
     },
@@ -81,7 +82,7 @@ const TeamPage = () => {
       name: "Ms. Giancarla",
       role: "Educator",
       specialization: "Clinical Training & Simulation",
-      image: "/Team/Ms. Giancarla Educator.avif",
+      image: getTeamImageUrl('Ms. Giancarla Educator.avif'),
       achievements: ["Clinical Simulation", "Hands-on Training", "Skills Assessment"],
       category: "educator"
     },
@@ -89,7 +90,7 @@ const TeamPage = () => {
       name: "Ms. Hazel Mae",
       role: "Educator",
       specialization: "NCLEX Preparation & Strategy",
-      image: "/Team/Ms. Hazel Mae Educator.avif",
+      image: getTeamImageUrl('Ms. Hazel Mae Educator.avif'),
       achievements: ["NCLEX Strategy", "Test Preparation", "Success Coaching"],
       category: "educator"
     },
@@ -97,7 +98,7 @@ const TeamPage = () => {
       name: "Ms. Maya",
       role: "Educator",
       specialization: "International Student Support",
-      image: "/Team/Ms. Maya Educator.avif",
+      image: getTeamImageUrl('Ms. Maya Educator.avif'),
       achievements: ["International Support", "Cultural Integration", "Student Guidance"],
       category: "educator"
     },
@@ -105,7 +106,7 @@ const TeamPage = () => {
       name: "Ms. Priya",
       role: "Educator",
       specialization: "Advanced Clinical Skills",
-      image: "/Team/Ms. Priya Educator.avif",
+      image: getTeamImageUrl('Ms. Priya Educator.avif'),
       achievements: ["Advanced Skills", "Clinical Excellence", "Professional Development"],
       category: "educator"
     },
@@ -113,7 +114,7 @@ const TeamPage = () => {
       name: "Ms. Reena",
       role: "Educator",
       specialization: "OSCE & Practical Assessment",
-      image: "/Team/Ms. Reena Educator.avif",
+      image: getTeamImageUrl('Ms. Reena Educator.avif'),
       achievements: ["OSCE Specialist", "Practical Assessment", "Skills Evaluation"],
       category: "educator"
     },
@@ -121,7 +122,7 @@ const TeamPage = () => {
       name: "Ms. Rosana",
       role: "Educator",
       specialization: "Nursing Education & Mentoring",
-      image: "/Team/Ms. Rosana Educator.jpg",
+      image: getTeamImageUrl('Ms. Rosana Educator.jpg'),
       achievements: ["Educational Excellence", "Student Mentoring", "Professional Growth"],
       category: "educator"
     },
@@ -129,7 +130,7 @@ const TeamPage = () => {
       name: "Ms. Susan",
       role: "Educator",
       specialization: "Student Success & Career Guidance",
-      image: "/Team/Ms. Susan Educator.avif",
+      image: getTeamImageUrl('Ms. Susan Educator.avif'),
       achievements: ["Career Guidance", "Success Strategies", "Professional Development"],
       category: "educator"
     }

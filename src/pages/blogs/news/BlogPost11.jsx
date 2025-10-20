@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Heart, MapPin, Users, TrendingUp, DollarSign, Globe, Shield } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost11 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost11 = () => {
     author: 'NAI Australia Career Team',
     category: 'Career Opportunities',
     excerpt: 'Australia has become an attractive destination for nurses worldwide. Discover high demand for nurses, competitive compensation, flexible working conditions, and pathways to permanent residency.',
-    featuredImage: '/blog-images/b11.webp',
+    featuredImage: getBlogImageUrl('b11.webp'),
     tags: ['Australia', 'Nursing Careers', 'International Nurses', 'Work Opportunities', 'Immigration', 'Healthcare Jobs'],
     views: 4276,
     likes: 189,
@@ -642,7 +643,7 @@ const BlogPost11 = () => {
                     </h3>
                     <div className="text-center mb-3 sm:mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Editorial Team" 
                         className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 sm:mb-3 border-2 border-gray-200"
                       />

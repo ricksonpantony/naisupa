@@ -2,72 +2,97 @@ import React, { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ArrowRight, Play, Star, Award, CheckCircle } from 'lucide-react'
 import { Link } from 'react-router-dom'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../utils/imageStorage'
 
-// Real testimonials from the testimonials page
+// Real testimonials from the testimonials page - Using actual student photos from Supabase
 const realHeroTestimonials = [
   {
     name: "Geordy George",
     course: "OSCE",
     country: "Australia",
-    img: "/Gallery/NAI GALLERY/Students/Geordy George.webp",
-    quote: "I recently cleared my Australia OSCE and couldn't be happier with the support and guidance I received from NAI!"
+    img: getGalleryImageUrl("NAI GALLERY/Students/Geordy George.webp"),
+    quote: "I recently cleared my Australia OSCE and couldn't be happier with the support and guidance I received from NAI! The training was comprehensive, well-structured, and focused on real exam scenarios."
   },
   {
     name: "Nimrat Kaur",
     course: "OSCE", 
     country: "Australia",
-    img: "/Gallery/NAI GALLERY/Students/Nimrat Kaur.webp",
-    quote: "With your support, guidance and appreciation I pass my OSCE exam. Thanks Georgi sir, Geeta ma'am, preeti ma'am and Rena ma'am."
+    img: getGalleryImageUrl("NAI GALLERY/Students/Nimrat Kaur.webp"),
+    quote: "I would like to thank you whole NAI team. With your support, guidance and appreciation I pass my OSCE exam. I highly recommend NAI to anyone who wants to pass their OSCE!"
   },
   {
     name: "Jeni Jhonson",
     course: "OSCE",
     country: "Australia", 
-    img: "/Gallery/NAI GALLERY/Students/Jeni Jhonson.webp",
-    quote: "Thank you NAI family for making this possible, especially Georgi sir and preeti mam for your constant motivation."
+    img: getGalleryImageUrl("NAI GALLERY/Students/Jeni Jhonson.webp"),
+    quote: "Thank you NAI family for making this possible, especially Georgi sir and preeti mam for your constant motivation. I still remember the days we have been in the lab."
   },
   {
     name: "Abhay Sharma",
     course: "NCLEX",
     country: "USA",
-    img: "/Gallery/NAI GALLERY/Students/Abhay Sharma.webp",
-    quote: "Fantastic experience with NAI's NCLEX preparation program. The instructors are highly qualified and provide personalized attention."
+    img: getGalleryImageUrl("NAI GALLERY/Students/Abhay Sharma.webp"),
+    quote: "Fantastic experience with NAI's NCLEX preparation program. The instructors are highly qualified and provide personalized attention to each student."
   },
   {
     name: "Airi Sano",
     course: "NCLEX",
     country: "USA",
-    img: "/Gallery/NAI GALLERY/Students/Airi Sano.webp",
-    quote: "NAI provided excellent NCLEX training with experienced instructors who are always ready to help."
+    img: getGalleryImageUrl("NAI GALLERY/Students/Airi Sano.webp"),
+    quote: "NAI provided excellent NCLEX training with experienced instructors who are always ready to help. The comprehensive curriculum made my preparation journey smooth and successful."
   },
   {
     name: "Bianca Asuncion",
     course: "OSCE",
     country: "Australia",
-    img: "/Gallery/NAI GALLERY/Students/Bianca Asuncion.webp",
-    quote: "NAI provided comprehensive OSCE training that helped me pass on my first attempt."
+    img: getGalleryImageUrl("NAI GALLERY/Students/Bianca Asuncion.webp"),
+    quote: "NAI provided comprehensive OSCE training that helped me pass on my first attempt. The mock exams and personalized feedback were exceptional."
   }
 ]
 
-// Real hero grid students from testimonials - Extended for better display
+// Real hero grid students from testimonials - Using actual student photos from Supabase (all 31 students)
 const realHeroGridStudents = [
-  { name: "Geordy George", course: "OSCE", img: "/Gallery/NAI GALLERY/Students/Geordy George.webp" },
-  { name: "Nimrat Kaur", course: "OSCE", img: "/Gallery/NAI GALLERY/Students/Nimrat Kaur.webp" },
-  { name: "Jeni Jhonson", course: "OSCE", img: "/Gallery/NAI GALLERY/Students/Jeni Jhonson.webp" },
-  { name: "Abhay Sharma", course: "NCLEX", img: "/Gallery/NAI GALLERY/Students/Abhay Sharma.webp" },
-  { name: "Airi Sano", course: "NCLEX", img: "/Gallery/NAI GALLERY/Students/Airi Sano.webp" },
-  { name: "Bianca Asuncion", course: "OSCE", img: "/Gallery/NAI GALLERY/Students/Bianca Asuncion.webp" },
-  { name: "Dax Patel", course: "OSCE", img: "/Gallery/NAI GALLERY/Students/Dax Patel.webp" },
-  { name: "Ezina Paudel", course: "OSCE", img: "/Gallery/NAI GALLERY/Students/Ezina Paudel.webp" },
-  { name: "Jaskaran Singh", course: "OSCE", img: "/Gallery/NAI GALLERY/Students/Jaskaran Singh.webp" },
-  { name: "Johanna Mae Dela Torre", course: "OSCE", img: "/Gallery/NAI GALLERY/Students/Johanna Mae Dela Torre.webp" },
-  { name: "Kiran Patel", course: "NCLEX", img: "/Gallery/NAI GALLERY/Students/Geordy George.webp" },
-  { name: "Maria Santos", course: "OSCE", img: "/Gallery/NAI GALLERY/Students/Nimrat Kaur.webp" }
+  { name: "Dax Patel", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Dax Patel.webp") },
+  { name: "Ezina Paudel", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Ezina Paudel.webp") },
+  { name: "Jaskaran Singh", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Jaskaran Singh.webp") },
+  { name: "Johanna Mae Dela Torre", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Johanna Mae Dela Torre.webp") },
+  { name: "Aayushma Koirala", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Aayushma Koirala.webp") },
+  { name: "Akindele Titilayo", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Akindele Titilayo.webp") },
+  { name: "Aneesha Gottamukkala", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/Students/Aneesha Gottamukkala.webp") },
+  { name: "Bunu Maharjan", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Bunu Maharjan.webp") },
+  { name: "Ghah Eukeria", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/Students/Ghah Eukeria.webp") },
+  { name: "Hadi Ahmadi", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Hadi Ahmadi.webp") },
+  { name: "Libni Paul", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Libni Paul.webp") },
+  { name: "Mia Raven", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Mia Raven.webp") },
+  { name: "Priyanka Patel", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Priyanka Patel.webp") },
+  { name: "Jannis", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/Students/Jannis.webp") },
+  { name: "Jesse Brian", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Jesse Brian.webp") },
+  { name: "Linisha Parajuli", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/Students/Linisha Parajuli.webp") },
+  { name: "Malek Al Talafha", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Malek Al Talafha.webp") },
+  { name: "Regina Abi", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/Students/Regina Abi.webp") },
+  { name: "Sangita Bhusal", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Sangita Bhusal.webp") },
+  { name: "Saritha", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/Students/Saritha.webp") },
+  { name: "Sonam Palden", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Sonam Palden.webp") },
+  { name: "Swastika Parajuli", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/Students/Swastika Parajuli.webp") },
+  { name: "Tamilarasi", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Tamilarasi.webp") },
+  { name: "Trisha Claire Apillanes", course: "NCLEX", img: getGalleryImageUrl("NAI GALLERY/Students/Trisha Claire Apillanes.webp") },
+  { name: "Zheena Formaran", course: "OSCE", img: getGalleryImageUrl("NAI GALLERY/Students/Zheena Formaran.webp") }
 ]
 
 const Hero = () => {
   const [tIndex, setTIndex] = useState(0)
   const [textIndex, setTextIndex] = useState(0)
+  const [gridOffset, setGridOffset] = useState(0)
+  
+  // Log first testimonial image URL to verify Supabase
+  useEffect(() => {
+    if (realHeroTestimonials.length > 0) {
+      console.log('Hero Testimonial Image URL:', realHeroTestimonials[0].img)
+    }
+    if (realHeroGridStudents.length > 0) {
+      console.log('Hero Grid Student Image URL:', realHeroGridStudents[0].img)
+    }
+  }, [])
   
   // Array of inspiring nursing career phrases
   const heroTexts = [
@@ -125,6 +150,14 @@ const Hero = () => {
       setTextIndex((prev) => (prev + 1) % heroTexts.length)
     }, 6000) // change text every 6s for more time to read
     return () => clearInterval(textId)
+  }, [])
+
+  // Rotate through different student batches with smooth transitions
+  useEffect(() => {
+    const gridId = setInterval(() => {
+      setGridOffset((prev) => (prev + 10) % realHeroGridStudents.length)
+    }, 15000) // rotate student grid every 15s (increased for smoother experience)
+    return () => clearInterval(gridId)
   }, [])
 
   return (
@@ -470,6 +503,12 @@ const Hero = () => {
                                   loading={tIndex === 0 ? "eager" : "lazy"}
                                   fetchpriority={tIndex === 0 ? "high" : "low"}
                                   decoding="async"
+                                  onError={(e) => {
+                                    console.error('Failed to load hero testimonial image:', e.target.src)
+                                  }}
+                                  onLoad={() => {
+                                    console.log('✅ Hero testimonial image loaded from Supabase:', student.name)
+                                  }}
                                 />
                               </div>
                               <div className="absolute -bottom-1 -right-1 bg-green-500 text-white rounded-full p-0.5">
@@ -499,33 +538,50 @@ const Hero = () => {
                 </div>
 
                 {/* Student grid - Mobile: 8 images (4x2), Desktop: 10 images (5x2) */}
-                <motion.div 
-                  className="grid grid-cols-4 sm:grid-cols-5 gap-2 mb-6 relative z-10"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 1.0 }}
-                >
-                  {/* Show 10 images total - responsive grid will handle layout */}
-                  {realHeroGridStudents.slice(0, 10).map((student, i) => {
-                    return (
-                      <motion.div
-                        key={i}
-                        className={`bg-white/70 backdrop-blur-md rounded-lg shadow-[0_2px_8px_0_rgba(31,38,135,0.15)] border border-white/50 p-1.5 sm:p-2 text-center relative hover:shadow-[0_4px_16px_0_rgba(31,38,135,0.25)] hover:bg-white/80 transition-all duration-500 ${i >= 8 ? 'hidden sm:block' : ''}`}
-                        initial={{ opacity: 0, scale: 0.7, y: 20 }}
-                        animate={{ 
-                          opacity: [0, 0.3, 0.7, 1, 1, 1, 0.7, 0.3, 0], 
-                          scale: [0.7, 0.8, 0.9, 1, 1, 1, 0.9, 0.8, 0.7],
-                          y: [20, 10, 5, 0, 0, 0, 5, 10, 20]
-                        }}
-                        transition={{ 
-                          duration: 8, // Faster animation: 12s → 8s
-                          repeat: Infinity, 
-                          delay: i * 0.6, // Faster stagger: 0.8s → 0.6s
-                          ease: [0.25, 0.1, 0.25, 1],
-                          times: [0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.7, 0.8, 1]
-                        }}
-                        whileHover={{ scale: 1.08, transition: { duration: 0.3 } }}
-                      >
+                <div className="grid grid-cols-4 sm:grid-cols-5 gap-2 mb-6 relative z-10">
+                  <AnimatePresence mode="wait">
+                    {/* Show 10 images total - rotates through all students */}
+                    {Array.from({ length: 10 }).map((_, i) => {
+                      const studentIndex = (gridOffset + i) % realHeroGridStudents.length
+                      const student = realHeroGridStudents[studentIndex]
+                      return (
+                        <motion.div
+                          key={`${gridOffset}-${studentIndex}-${i}`}
+                          className={`bg-white/70 backdrop-blur-md rounded-lg shadow-[0_2px_8px_0_rgba(31,38,135,0.15)] border border-white/50 p-1.5 sm:p-2 text-center relative hover:shadow-[0_4px_16px_0_rgba(31,38,135,0.25)] hover:bg-white/80 transition-all duration-500 ${i >= 8 ? 'hidden sm:block' : ''}`}
+                          initial={{ 
+                            opacity: 0, 
+                            scale: 0.6,
+                            y: 30,
+                            filter: 'blur(4px)'
+                          }}
+                          animate={{ 
+                            opacity: 1, 
+                            scale: 1,
+                            y: 0,
+                            filter: 'blur(0px)',
+                            transition: {
+                              duration: 0.6,
+                              delay: i * 0.12,
+                              ease: [0.23, 1, 0.32, 1]
+                            }
+                          }}
+                          exit={{ 
+                            opacity: 0, 
+                            scale: 0.6,
+                            y: -30,
+                            filter: 'blur(4px)',
+                            transition: {
+                              duration: 0.4,
+                              delay: i * 0.08,
+                              ease: [0.23, 1, 0.32, 1]
+                            }
+                          }}
+                          whileHover={{ 
+                            scale: 1.08,
+                            y: -2,
+                            transition: { duration: 0.2 } 
+                          }}
+                        >
                         <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full overflow-hidden shadow-sm mx-auto mb-1 bg-gradient-to-br from-nai-highlight to-nai-deep-teal">
                           <img 
                             src={student.img} 
@@ -537,8 +593,12 @@ const Hero = () => {
                             fetchpriority={i < 2 ? "high" : "low"}
                             decoding="async"
                             onError={(e) => {
+                              console.error(`Failed to load hero grid image for ${student.name}:`, e.target.src)
                               e.target.style.display = 'none';
                               e.target.parentElement.innerHTML = `<div class="w-full h-full flex items-center justify-center text-white text-xs font-bold">${student.name.charAt(0)}</div>`;
+                            }}
+                            onLoad={() => {
+                              if (i < 3) console.log(`✅ Hero grid image ${i + 1} loaded from Supabase`)
                             }}
                           />
                         </div>
@@ -550,7 +610,8 @@ const Hero = () => {
                       </motion.div>
                     )
                   })}
-                </motion.div>
+                  </AnimatePresence>
+                </div>
 
                 {/* CTA */}
                 <motion.div 

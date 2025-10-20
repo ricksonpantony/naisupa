@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Heart, MessageSquare, Users, FileText, Award, Target, Mic } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost18 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost18 = () => {
     author: 'Communication Skills Institute',
     category: 'Clinical Skills',
     excerpt: 'Develop advanced communication techniques crucial for high-stakes clinical environments and OSCE exam success. Learn therapeutic communication, conflict resolution, and patient advocacy skills.',
-    featuredImage: '/Images/nursing-communication.webp',
+    featuredImage: getGeneralImageUrl('nursing-communication.webp'),
     tags: ['Communication', 'OSCE', 'Clinical Skills', 'Patient Care', 'Therapeutic Communication', 'Interprofessional'],
     views: 8145,
     likes: 412,
@@ -560,7 +561,7 @@ const BlogPost18 = () => {
                     </h3>
                     <div className="text-center mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="Communication Skills Institute" 
                         className="w-16 h-16 rounded-full object-cover mx-auto mb-3 border-2 border-nai-teal/200"
                       />

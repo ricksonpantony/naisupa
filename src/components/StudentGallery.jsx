@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
 import { ChevronLeft, ChevronRight, X, Quote } from 'lucide-react'
+import { getGalleryImageUrl } from '../utils/imageStorage'
 
 const StudentGallery = () => {
   const ref = useRef(null)
@@ -14,69 +15,69 @@ const StudentGallery = () => {
   const students = [
     {
       id: 1,
-      name: "Sarah Johnson",
+      name: "Aayushma Koirala",
       course: "NCLEX-RN Passer",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face",
+      image: getGalleryImageUrl("NAI GALLERY/Students/Aayushma%20Koirala.webp"),
       quote: "NAI's comprehensive training program gave me the confidence and skills I needed to pass the NCLEX-RN on my first attempt. The educators are amazing!",
-      country: "Philippines",
+      country: "Nepal",
       passDate: "March 2024",
       score: "95%",
-      flag: "🇵🇭"
+      flag: "��"
     },
     {
       id: 2,
-      name: "Michael Chen",
+      name: "Abhay Sharma",
       course: "OSCE Passer",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face",
+      image: getGalleryImageUrl("NAI GALLERY/Students/Abhay%20Sharma.webp"),
       quote: "The OBA pathway seemed daunting, but NAI's structured approach and supportive environment made all the difference. Highly recommended!",
-      country: "China",
+      country: "India",
       passDate: "February 2024",
       score: "92%",
-      flag: "🇨🇳"
+      flag: "�🇳"
     },
     {
       id: 3,
-      name: "Priya Sharma",
+      name: "Airi Sano",
       course: "NCLEX-NGN Passer",
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop&crop=face",
+      image: getGalleryImageUrl("NAI GALLERY/Students/Airi%20Sano.webp"),
       quote: "The new NCLEX format was challenging, but NAI's updated curriculum and practice sessions prepared me perfectly. Thank you for believing in me!",
-      country: "India",
+      country: "Japan",
       passDate: "January 2024",
       score: "98%",
-      flag: "🇮🇳"
+      flag: "��"
     },
     {
       id: 4,
-      name: "Ahmed Hassan",
+      name: "Akindele Titilayo",
       course: "OSCE Passer",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face",
-      quote: "Coming from Egypt, I was nervous about the Australian healthcare system. NAI helped me understand the cultural aspects and clinical skills needed.",
-      country: "Egypt",
+      image: getGalleryImageUrl("NAI GALLERY/Students/Akindele%20Titilayo.webp"),
+      quote: "Coming from Nigeria, I was nervous about the Australian healthcare system. NAI helped me understand the cultural aspects and clinical skills needed.",
+      country: "Nigeria",
       passDate: "December 2023",
       score: "89%",
-      flag: "🇪🇬"
+      flag: "�🇬"
     },
     {
       id: 5,
-      name: "Maria Rodriguez",
+      name: "Aneesha Gottamukkala",
       course: "NCLEX-RN Passer",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face",
+      image: getGalleryImageUrl("NAI GALLERY/Students/Aneesha%20Gottamukkala.webp"),
       quote: "The mock exams and personalized feedback were game-changers. I felt completely prepared and confident on exam day.",
-      country: "Mexico",
+      country: "India",
       passDate: "November 2023",
       score: "94%",
-      flag: "🇲🇽"
+      flag: "��"
     },
     {
       id: 6,
-      name: "David Kim",
+      name: "Bianca Asuncion",
       course: "NCLEX-NGN Passer",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop&crop=face",
+      image: getGalleryImageUrl("NAI GALLERY/Students/Bianca%20Asuncion.webp"),
       quote: "NAI's focus on clinical judgment really paid off. The case studies and critical thinking exercises were exactly what I needed.",
-      country: "South Korea",
+      country: "Philippines",
       passDate: "October 2023",
       score: "96%",
-      flag: "🇰🇷"
+      flag: "��"
     }
   ]
 

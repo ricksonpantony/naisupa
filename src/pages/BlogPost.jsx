@@ -6,6 +6,7 @@ import SeoHead from '../components/SeoHead'
 import newsArticlesData from '../data/newsArticles.json'
 import LoadingSpinner from '../components/LoadingSpinner'
 import { useBlogNavigation } from '../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../utils/imageStorage'
 
 // Lazy load all blog post components
 const BlogPost21 = lazy(() => import('./blogs/news/BlogPost21'))
@@ -121,7 +122,7 @@ const BlogPost = () => {
       category: 'Registration Guide',
       readTime: '8 min read',
       excerpt: 'Becoming an Australian Registered Nurse (AURN) is a life-changing achievement for internationally qualified nurses.',
-      featuredImage: '/Images/australia-nursing.webp',
+      featuredImage: getGeneralImageUrl('australia-nursing.webp'),
       tags: ['AURN', 'AHPRA', 'NCLEX', 'OSCE', 'Australia', 'Registration'],
       content: `
         <div class="prose prose-lg max-w-none">
@@ -891,7 +892,7 @@ const BlogPost = () => {
                     </h3>
                     <div className="text-center mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Team" 
                         className="w-16 h-16 rounded-full object-cover mx-auto mb-3 border-2 border-nai-teal/20"
                       />

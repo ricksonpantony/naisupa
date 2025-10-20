@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Zap, Activity, AlertTriangle, Timer } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost8 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost8 = () => {
     author: 'NAI Clinical Decision Team',
     category: 'Clinical Reasoning',
     excerpt: 'Clinical decision-making is tested rigorously in the OSCE. This article explains how to approach complex scenarios calmly and methodically using structured frameworks.',
-    featuredImage: '/blog-images/b8.webp',
+    featuredImage: getBlogImageUrl('b8.webp'),
     tags: ['OSCE', 'Clinical Decision Making', 'ABCDE', 'Sepsis', 'Patient Prioritization'],
     views: 3654,
     likes: 145,
@@ -618,7 +619,7 @@ const BlogPost8 = () => {
                     </h3>
                     <div className="text-center mb-3 sm:mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Editorial Team" 
                         className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 sm:mb-3 border-2 border-nai-teal"
                       />

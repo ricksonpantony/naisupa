@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Calendar, Clock, User, ArrowLeft, Share2, BookOpen, Tag, Eye, CheckCircle, ArrowRight, Heart, Brain, Users, Lightbulb } from 'lucide-react'
 import SeoHead from '../../../components/SeoHead'
 import { useBlogNavigation } from '../../../hooks/useBlogNavigation'
+import { getBlogImageUrl, getGalleryImageUrl, getGeneralImageUrl, getTeamImageUrl } from '../../../utils/imageStorage'
 
 const BlogPost10 = () => {
   const { backToNewsUrl } = useBlogNavigation()
@@ -63,7 +64,7 @@ const BlogPost10 = () => {
     author: 'NAI Psychosocial Care Team',
     category: 'NCLEX Psychosocial',
     excerpt: 'Psychosocial integrity questions assess your ability to provide emotional support and maintain patient dignity. They cover topics such as therapeutic communication, mental-health disorders, coping mechanisms, grief and loss.',
-    featuredImage: '/blog-images/b10.webp',
+    featuredImage: getBlogImageUrl('b10.webp'),
     tags: ['NCLEX', 'Psychosocial Integrity', 'Therapeutic Communication', 'Mental Health', 'Patient Care'],
     views: 3298,
     likes: 127,
@@ -591,7 +592,7 @@ const BlogPost10 = () => {
                     </h3>
                     <div className="text-center mb-3 sm:mb-4">
                       <img 
-                        src="/Images/ALLTECHZONE.webp" 
+                        src={getGeneralImageUrl('ALLTECHZONE.webp')} 
                         alt="NAI Editorial Team" 
                         className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 sm:mb-3 border-2 border-nai-teal"
                       />
